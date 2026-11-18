@@ -87,6 +87,7 @@ const FALLBACK_TEXT = {
   "pay.alipay": "支付宝 (Alipay)",
   "pay.step_note": "请使用对应 App 扫描上方收款码完成人民币支付（月卡 ¥3 / 季卡 ¥5 / 年卡 ¥10 / 永久 ¥20）。支付成功后，请将以下 4 项信息发送至 <strong>payment@lubitsoft.com</strong> 申请激活码：<br>1. 付款截图<br>2. 交易单号<br>3. 购买的激活时长（月卡 / 季卡 / 年卡 / 永久激活）<br>4. 软件提供的机器码<br>我们会在 <strong>24 小时内</strong> 处理您的购买申请，并将激活码发送至您的买家邮箱。",
   "nav.home": "官网首页",
+  "nav.support": "支持",
   "theme.auto": "跟随系统",
   "theme.light": "浅色",
   "theme.dark": "深色",
@@ -647,6 +648,7 @@ function renderUnifiedFooter() {
           <ul>
             <li><a href="${resolveLocalUrl("/")}">${tr("nav.home")}</a></li>
             <li><a href="${resolveLocalUrl("/about")}">${tr("footer.l_about")}</a></li>
+            <li><a href="${resolveLocalUrl("/support")}">${tr("nav.support")}</a></li>
           </ul>
         </div>
       </div>
