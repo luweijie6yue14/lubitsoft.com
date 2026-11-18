@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ForceUninstaller — LubitSoft</title>
+  <script>(function(){var m=localStorage.getItem("lubitsoft_theme")||"auto";var d=m==="auto"?window.matchMedia("(prefers-color-scheme: dark)").matches:m==="dark";document.documentElement.setAttribute("data-theme",d?"dark":"light");document.documentElement.style.backgroundColor=d?"#0B1120":"#FFFFFF";})();</script>
+  <link rel="icon" type="image/png" href="../assets/forceuninstaller-logo.png" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body data-page="channel">
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="/" class="brand-link">
+        <img src="../logo.svg" alt="LubitSoft Logo" />
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/" data-i18n="nav.home">官网首页</a></li>
+        <li><a href="/about" data-i18n="nav.about">关于公司</a></li>
+        <li><a href="/android" data-i18n="nav.android">Android 专栏</a></li>
+        <li><a href="/windows" class="active" data-i18n="nav.windows">Windows 专栏</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-banner windows-banner">
+    <div class="container channel-hero-grid">
+      <img src="../assets/forceuninstaller-logo.png" alt="ForceUninstaller Logo" class="app-logo-lg" />
+      <div>
+        <span class="portal-pill" style="background:rgba(255,255,255,0.2); color:#FFFFFF;" data-i18n="ch.pill">● LubitSoft 官方专属下载渠道</span>
+        <h1>ForceUninstaller</h1>
+        <p data-i18n="fu.sub">轻量高效的 Windows 强力卸载与系统残留深度清理工具，免费开源，支持 Windows 10 与 Windows 11。</p>
+        <div class="channel-meta-pills">
+          <span class="channel-pill" data-i18n="fu.meta5">授权：免费软件</span>
+          <span class="channel-pill" data-i18n="fu.meta1">版本：v1.0.0</span>
+          <span class="channel-pill" data-i18n="fu.meta2">系统要求：Windows 10 / Windows 11</span>
+          <span class="channel-pill" data-i18n="fu.meta3">安装包：ForceUninstaller_Setup_v1.0.0.exe</span>
+          <span class="channel-pill" data-i18n="fu.meta4">大小：16.48 MB</span>
+        </div>
+        <div style="display:flex; flex-wrap:wrap; gap:12px;">
+          <button type="button" class="btn btn-primary" onclick="startApkDownload(event, 'win-forceuninstaller')" data-i18n="fu.dl_btn">
+            ⬇ 下载安装程序 (16.48 MB)
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="channel-card">
+        <span class="section-tag" data-i18n="ch.overview">Software Overview</span>
+        <h2 class="section-title" style="margin-bottom: 14px;" data-i18n="ch.overview_t">软件简介与核心特性</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 20px;" data-i18n="fu.desc">
+          ForceUninstaller 是一款专为 Windows 10 与 Windows 11 打造的轻量强力软件卸载工具。能够快速扫描本机已安装程序，强制卸载无法正常移除的顽固软件，并深度扫描清理残留文件夹与系统注册表项，保持系统清爽高效。
+        </p>
+
+        <div class="feature-list-grid">
+          <div class="feature-box">
+            <h4 data-i18n="fu.f1_t">🧹 强力卸载顽固软件</h4>
+            <p data-i18n="fu.f1_d">支持强制终止占用进程并彻底卸载常规卸载程序无法移除的顽固软件。</p>
+          </div>
+          <div class="feature-box">
+            <h4 data-i18n="fu.f2_t">🗂️ 残留文件与注册表清理</h4>
+            <p data-i18n="fu.f2_d">卸载后智能扫描磁盘残留目录与 Windows 注册表冗余键值，一键彻底清除。</p>
+          </div>
+          <div class="feature-box">
+            <h4 data-i18n="fu.f3_t">⚡ 高 DPI 原生界面</h4>
+            <p data-i18n="fu.f3_d">支持高分辨率屏幕清晰显示与自动管理员权限提权，操作直观流畅。</p>
+          </div>
+          <div class="feature-box">
+            <h4 data-i18n="fu.f4_t">🎁 纯净免费无捆绑</h4>
+            <p data-i18n="fu.f4_d">完全免费使用，无任何广告弹窗或第三方捆绑插件，安全可靠。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer"></footer>
+
+  <script src="../js/i18n.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

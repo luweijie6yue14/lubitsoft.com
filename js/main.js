@@ -37,6 +37,7 @@ const LUBIT_CATALOG = [
   {
     id: "win-hardwarelens",
     platform: "windows",
+    isPaid: true,
     name: "HardwareLens",
     version: "v1.0.0",
     size: "54.82 MB",
@@ -46,6 +47,20 @@ const LUBIT_CATALOG = [
     apkFileName: "HardwareLens_Setup_v1.0.0.exe",
     packageId: "LubitSoft.HardwareLens",
     detailPage: "/hardwarelens"
+  },
+  {
+    id: "win-forceuninstaller",
+    platform: "windows",
+    isPaid: false,
+    name: "ForceUninstaller",
+    version: "v1.0.0",
+    size: "16.48 MB",
+    req: "Windows 10 / Windows 11",
+    iconImg: `${ASSET_PREFIX}assets/forceuninstaller-logo.png`,
+    apkUrl: `${ASSET_PREFIX}downloads/ForceUninstaller_Setup_v1.0.0.exe`,
+    apkFileName: "ForceUninstaller_Setup_v1.0.0.exe",
+    packageId: "LubitSoft.ForceUninstaller",
+    detailPage: "/forceuninstaller"
   }
 ];
 
@@ -53,6 +68,7 @@ const FALLBACK_TEXT = {
   "btn.gp_dl": "Google Play 下载",
   "btn.apk_backup": "下载 APK",
   "btn.dl_installer": "下载安装程序",
+  "btn.free_software": "免费软件",
   "btn.buy_license": "微信 / 支付宝付款",
   "btn.taobao": "淘宝官方店铺购买",
   "toast.taobao_soon": "淘宝官方店铺即将开放，敬请期待！",
@@ -217,13 +233,20 @@ function createSoftwareCard(item, mode = "column") {
   let actionsHtml = "";
   let extraSpec = "";
 
-  if (item.platform === "windows") {
+  if (item.platform === "windows" && item.isPaid) {
     extraSpec = `<span class="spec-chip spec-chip-pro">${tr("hl.badge_paid")}</span>`;
     actionsHtml = `
       <div class="card-actions-grid">
         <button type="button" class="btn btn-sm btn-windows" onclick="startApkDownload(event, '${item.id}')">${tr("btn.dl_installer")}</button>
         <button type="button" class="btn btn-sm btn-android" onclick="openPaymentModal()">${tr("btn.buy_license")}</button>
         <button type="button" class="btn btn-sm btn-taobao-disabled" style="grid-column: 1 / -1;" onclick="showTaobaoComingSoon()">${tr("btn.taobao")}</button>
+      </div>
+    `;
+  } else if (item.platform === "windows") {
+    extraSpec = `<span class="spec-chip" style="background: var(--android-green-soft); color: var(--android-green); font-weight:600;">${tr("btn.free_software")}</span>`;
+    actionsHtml = `
+      <div class="card-actions">
+        <button type="button" class="btn btn-sm btn-windows" onclick="startApkDownload(event, '${item.id}')">${tr("btn.dl_installer")}</button>
       </div>
     `;
   } else if (mode === "home") {
