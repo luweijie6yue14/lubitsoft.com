@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>macOS — LubitSoft</title>
+  <script>(function(){var m=localStorage.getItem("lubitsoft_theme")||"auto";var d=m==="auto"?window.matchMedia("(prefers-color-scheme: dark)").matches:m==="dark";document.documentElement.setAttribute("data-theme",d?"dark":"light");document.documentElement.style.backgroundColor=d?"#0B1120":"#FFFFFF";})();</script>
+  <link rel="icon" type="image/svg+xml" href="../logo-mark.svg" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body data-page="macos">
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="/" class="brand-link">
+        <img src="../logo.svg" alt="LubitSoft Logo" />
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/" data-i18n="nav.home">官网首页</a></li>
+        <li><a href="/about" data-i18n="nav.about">关于公司</a></li>
+        <li><a href="/android" data-i18n="nav.android">Android 专栏</a></li>
+        <li><a href="/windows" data-i18n="nav.windows">Windows 专栏</a></li>
+        <li><a href="/ios" data-i18n="nav.ios">iOS 专栏</a></li>
+        <li><a href="/macos" class="active" data-i18n="nav.macos">macOS 专栏</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-banner macos-banner">
+    <div class="container">
+      <span class="portal-pill" style="background:rgba(255,255,255,0.18); color:#FFFFFF;" data-i18n="macos.banner_pill">■ macOS Desktop</span>
+      <h1 data-i18n="macos.banner_title">macOS 软件专栏</h1>
+      <p data-i18n="macos.banner_desc">面向 Mac 桌面生态的软件专栏，正在筹备中。</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="software-grid" id="softwareGrid"></div>
+    </div>
+  </section>
+
+  <footer class="site-footer"></footer>
+
+  <script src="../js/i18n.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

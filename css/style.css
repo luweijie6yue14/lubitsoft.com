@@ -121,12 +121,13 @@ button, input, textarea, select {
 }
 
 .nav-links a {
-  padding: 8px 16px;
+  padding: 8px 12px;
   border-radius: 999px;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-weight: 500;
   color: var(--text-secondary);
   transition: var(--transition);
+  white-space: nowrap;
 }
 
 .nav-links a:hover,
@@ -1087,6 +1088,32 @@ button, input, textarea, select {
 
 .page-banner.windows-banner {
   background: linear-gradient(135deg, #0A2540 0%, #0078D4 100%);
+}
+
+.page-banner.ios-banner {
+  background: linear-gradient(135deg, #1E1B4B 0%, #4F46E5 100%);
+}
+
+.page-banner.macos-banner {
+  background: linear-gradient(135deg, #0F172A 0%, #334155 100%);
+}
+
+.portal-card.ios {
+  background: linear-gradient(145deg, var(--bg-card) 60%, rgba(79, 70, 229, 0.1) 100%);
+}
+
+.portal-card.macos {
+  background: linear-gradient(145deg, var(--bg-card) 60%, rgba(100, 116, 139, 0.12) 100%);
+}
+
+.portal-pill.ios {
+  background: rgba(79, 70, 229, 0.12);
+  color: #4F46E5;
+}
+
+.portal-pill.macos {
+  background: rgba(100, 116, 139, 0.14);
+  color: var(--text-primary);
 }
 
 .page-banner h1 {

@@ -94,9 +94,11 @@ const FALLBACK_TEXT = {
   "footer.col1": "软件专栏与专属渠道",
   "footer.col2": "关于与隐私合规",
   "footer.l_and": "Android 软件下载",
-  "footer.l_pd": "PureDasher 专属下载",
-  "footer.l_ac": "AirCompass 专属下载",
   "footer.l_win": "Windows 软件专栏",
+  "footer.l_ios": "iOS 软件专栏",
+  "footer.l_macos": "macOS 软件专栏",
+  "apple.empty_t": "暂无软件，敬请期待",
+  "apple.empty_d": "该平台软件正在筹备规划中，目前您可先浏览已正式上架的 Android 与 Windows 软件。",
   "footer.l_about": "公司简介与愿景",
   "footer.l_ppd": "PureDasher 隐私权政策",
   "footer.l_pac": "AirCompass 隐私权政策",
@@ -312,11 +314,19 @@ function initPlatformCatalog(platform) {
 
   if (items.length === 0) {
     const andHref = resolveLocalUrl("/android");
+    const winHref = resolveLocalUrl("/windows");
+    const isApple = platform === "ios" || platform === "macos";
+    const titleText = isApple ? tr("apple.empty_t") : tr("win.empty_t");
+    const descText = isApple ? tr("apple.empty_d") : tr("win.empty_d");
+    grid.style.gridTemplateColumns = "1fr";
     grid.innerHTML = `
       <div style="grid-column: 1 / -1; text-align:center; padding: 64px 24px; background: var(--bg-subtle); border: 1px solid var(--border-color); border-radius: var(--radius-lg);">
-        <h3 style="font-size:1.35rem; margin-bottom:10px; color: var(--text-primary);">${tr("win.empty_t")}</h3>
-        <p style="color: var(--text-secondary); max-width:520px; margin: 0 auto 24px;">${tr("win.empty_d")}</p>
-        <a href="${andHref}" class="btn btn-android">${tr("win.empty_btn")}</a>
+        <h3 style="font-size:1.35rem; margin-bottom:10px; color: var(--text-primary);">${titleText}</h3>
+        <p style="color: var(--text-secondary); max-width:520px; margin: 0 auto 24px;">${descText}</p>
+        <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+          <a href="${andHref}" class="btn btn-android">${tr("win.empty_btn")}</a>
+          <a href="${winHref}" class="btn btn-windows">${tr("footer.l_win")}</a>
+        </div>
       </div>
     `;
     return;
@@ -628,6 +638,8 @@ function renderUnifiedFooter() {
           <ul>
             <li><a href="${resolveLocalUrl("/android")}">${tr("footer.l_and")}</a></li>
             <li><a href="${resolveLocalUrl("/windows")}">${tr("footer.l_win")}</a></li>
+            <li><a href="${resolveLocalUrl("/ios")}">${tr("footer.l_ios")}</a></li>
+            <li><a href="${resolveLocalUrl("/macos")}">${tr("footer.l_macos")}</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -669,7 +681,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initCookieBanner();
 
   const pageType = document.body.dataset.page;
-  if (pageType === "android" || pageType === "windows") {
+  if (pageType === "android" || pageType === "windows" || pageType === "ios" || pageType === "macos") {
     initPlatformCatalog(pageType);
   }
 
