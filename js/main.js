@@ -54,12 +54,12 @@ const LUBIT_CATALOG = [
     isPaid: false,
     hasPaidFeatures: true,
     name: "ForceUninstaller",
-    version: "v1.0.0",
-    size: "16.48 MB",
+    version: "v1.1.0",
+    size: "16.53 MB",
     req: "Windows 10 / Windows 11",
     iconImg: `${ASSET_PREFIX}assets/forceuninstaller-logo.png`,
-    apkUrl: `${ASSET_PREFIX}downloads/ForceUninstaller_Setup_v1.0.0.exe`,
-    apkFileName: "ForceUninstaller_Setup_v1.0.0.exe",
+    apkUrl: `${ASSET_PREFIX}downloads/ForceUninstaller_Setup_v1.1.0.exe`,
+    apkFileName: "ForceUninstaller_Setup_v1.1.0.exe",
     packageId: "LubitSoft.ForceUninstaller",
     detailPage: "/forceuninstaller"
   }
@@ -86,11 +86,15 @@ const FALLBACK_TEXT = {
   "fu.badge_freemium": "部分功能付费",
   "pay.title": "HardwareLens 正版激活码购买",
   "fu.pay_title": "ForceUninstaller 高级功能激活码购买",
+  "dist.pay_title": "分销商授权买断付款（¥8,000）",
+  "dist.pay_bar": "Windows 激活码生成器一次性买断：¥8,000 人民币",
+  "dist.pay_step_note": "请使用对应 App 扫描上方收款码完成人民币 <strong>¥8,000</strong> 一次性买断支付。支付成功后，请将以下信息发送至商务合作邮箱 <strong>business@lubitsoft.com</strong>：<br>1. 付款截图<br>2. 交易单号<br>3. 您的姓名/团队名称及联系邮箱<br>我们会在 <strong>24 小时内</strong> 审核并向您交付 Windows 激活码生成器及专属授权密码。",
   "fu.taobao_modal_desc": "淘宝官方店铺正在筹备上线中，即将开放，敬请期待！目前您可通过微信或支付宝渠道购买 ForceUninstaller 高级功能激活码。",
   "pay.wechat": "微信支付 (WeChat)",
   "pay.alipay": "支付宝 (Alipay)",
   "pay.step_note": "请使用对应 App 扫描上方收款码完成人民币支付（月卡 ¥3 / 季卡 ¥5 / 年卡 ¥10 / 永久 ¥20）。支付成功后，请将以下 4 项信息发送至 <strong>payment@lubitsoft.com</strong> 申请激活码：<br>1. 付款截图<br>2. 交易单号<br>3. 购买的激活时长（月卡 / 季卡 / 年卡 / 永久激活）<br>4. 软件提供的机器码<br>我们会在 <strong>24 小时内</strong> 处理您的购买申请，并将激活码发送至您的买家邮箱。",
   "nav.home": "官网首页",
+  "nav.distributors": "分销商",
   "nav.support": "支持",
   "theme.auto": "跟随系统",
   "theme.light": "浅色",
@@ -535,11 +539,17 @@ function openManualVerifyModal(item) {
 
 function openPaymentModal(appName = "HardwareLens") {
   ensureModalsExist();
-  document.getElementById("payModalTitle").textContent = appName === "ForceUninstaller" ? tr("fu.pay_title") : tr("pay.title");
-  document.getElementById("payPricingBar").textContent = `${tr("hl.t_month")} ${tr("hl.p_month")} · ${tr("hl.t_quarter")} ${tr("hl.p_quarter")} · ${tr("hl.t_year")} ${tr("hl.p_year")} · ${tr("hl.t_perm")} ${tr("hl.p_perm")}`;
+  if (appName === "Distributor") {
+    document.getElementById("payModalTitle").textContent = tr("dist.pay_title");
+    document.getElementById("payPricingBar").textContent = tr("dist.pay_bar");
+    document.getElementById("payStepNote").innerHTML = tr("dist.pay_step_note");
+  } else {
+    document.getElementById("payModalTitle").textContent = appName === "ForceUninstaller" ? tr("fu.pay_title") : tr("pay.title");
+    document.getElementById("payPricingBar").textContent = `${tr("hl.t_month")} ${tr("hl.p_month")} · ${tr("hl.t_quarter")} ${tr("hl.p_quarter")} · ${tr("hl.t_year")} ${tr("hl.p_year")} · ${tr("hl.t_perm")} ${tr("hl.p_perm")}`;
+    document.getElementById("payStepNote").innerHTML = tr("pay.step_note");
+  }
   document.getElementById("payTabWechat").textContent = tr("pay.wechat");
   document.getElementById("payTabAlipay").textContent = tr("pay.alipay");
-  document.getElementById("payStepNote").innerHTML = tr("pay.step_note");
   switchPayMethod("wechat");
   document.getElementById("paymentModal").classList.add("open");
 }
@@ -659,6 +669,7 @@ function renderUnifiedFooter() {
           <ul>
             <li><a href="${resolveLocalUrl("/")}">${tr("nav.home")}</a></li>
             <li><a href="${resolveLocalUrl("/about")}">${tr("footer.l_about")}</a></li>
+            <li><a href="${resolveLocalUrl("/distributors")}">${tr("nav.distributors")}</a></li>
             <li><a href="${resolveLocalUrl("/support")}">${tr("nav.support")}</a></li>
           </ul>
         </div>
