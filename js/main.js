@@ -83,7 +83,7 @@ const FALLBACK_TEXT = {
   "btn.details": "详情",
   "btn.privacy": "隐私权政策",
   "hl.badge_paid": "付费软件 · 1小时免费试用",
-  "fu.badge_freemium": "部分功能收费 · 基础免费",
+  "fu.badge_freemium": "部分功能付费",
   "pay.title": "HardwareLens 正版激活码购买",
   "fu.pay_title": "ForceUninstaller 高级功能激活码购买",
   "fu.taobao_modal_desc": "淘宝官方店铺正在筹备上线中，即将开放，敬请期待！目前您可通过微信或支付宝渠道购买 ForceUninstaller 高级功能激活码。",
