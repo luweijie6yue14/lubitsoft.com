@@ -121,6 +121,7 @@ const FALLBACK_TEXT = {
   "toast.contact_ok": "感谢您的留言！LubitSoft 团队将在 24 小时内与您联系。",
   "verify.auto_checking": "正在进行安全环境自动人机验证...",
   "verify.auto_pass": "验证通过，正在为您下载 APK...",
+  "verify.auto_pass_win": "验证通过，正在为您下载安装程序...",
   "verify.manual_title": "请完成人机验证后下载",
   "verify.manual_desc": "自动安全检测未通过，请向右拖动滑块完成验证：",
   "verify.slider_hint": "向右滑动完成验证 →",
@@ -467,7 +468,7 @@ function proceedDownload(evt, item) {
 
   setTimeout(() => {
     if (runAutoHumanCheck(evt)) {
-      showToast(tr("verify.auto_pass"));
+      showToast(item.platform === "windows" ? tr("verify.auto_pass_win") : tr("verify.auto_pass"));
       triggerRealApkFile(item);
     } else {
       openManualVerifyModal(item);
