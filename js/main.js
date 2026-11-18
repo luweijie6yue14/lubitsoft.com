@@ -52,6 +52,7 @@ const LUBIT_CATALOG = [
     id: "win-forceuninstaller",
     platform: "windows",
     isPaid: false,
+    hasPaidFeatures: true,
     name: "ForceUninstaller",
     version: "v1.0.0",
     size: "16.48 MB",
@@ -82,7 +83,10 @@ const FALLBACK_TEXT = {
   "btn.details": "详情",
   "btn.privacy": "隐私权政策",
   "hl.badge_paid": "付费软件 · 1小时免费试用",
+  "fu.badge_freemium": "部分功能收费 · 基础免费",
   "pay.title": "HardwareLens 正版激活码购买",
+  "fu.pay_title": "ForceUninstaller 高级功能激活码购买",
+  "fu.taobao_modal_desc": "淘宝官方店铺正在筹备上线中，即将开放，敬请期待！目前您可通过微信或支付宝渠道购买 ForceUninstaller 高级功能激活码。",
   "pay.wechat": "微信支付 (WeChat)",
   "pay.alipay": "支付宝 (Alipay)",
   "pay.step_note": "请使用对应 App 扫描上方收款码完成人民币支付（月卡 ¥3 / 季卡 ¥5 / 年卡 ¥10 / 永久 ¥20）。支付成功后，请将以下 4 项信息发送至 <strong>payment@lubitsoft.com</strong> 申请激活码：<br>1. 付款截图<br>2. 交易单号<br>3. 购买的激活时长（月卡 / 季卡 / 年卡 / 永久激活）<br>4. 软件提供的机器码<br>我们会在 <strong>24 小时内</strong> 处理您的购买申请，并将激活码发送至您的买家邮箱。",
@@ -237,13 +241,14 @@ function createSoftwareCard(item, mode = "column") {
   let actionsHtml = "";
   let extraSpec = "";
 
-  if (item.platform === "windows" && item.isPaid) {
-    extraSpec = `<span class="spec-chip spec-chip-pro">${tr("hl.badge_paid")}</span>`;
+  if (item.platform === "windows" && (item.isPaid || item.hasPaidFeatures)) {
+    const badgeKey = item.isPaid ? "hl.badge_paid" : "fu.badge_freemium";
+    extraSpec = `<span class="spec-chip spec-chip-pro">${tr(badgeKey)}</span>`;
     actionsHtml = `
       <div class="card-actions-grid">
         <button type="button" class="btn btn-sm btn-windows" onclick="startApkDownload(event, '${item.id}')">${tr("btn.dl_installer")}</button>
-        <button type="button" class="btn btn-sm btn-android" onclick="openPaymentModal()">${tr("btn.buy_license")}</button>
-        <button type="button" class="btn btn-sm btn-taobao-disabled" style="grid-column: 1 / -1;" onclick="showTaobaoComingSoon()">${tr("btn.taobao")}</button>
+        <button type="button" class="btn btn-sm btn-android" onclick="openPaymentModal('${item.name}')">${tr("btn.buy_license")}</button>
+        <button type="button" class="btn btn-sm btn-taobao-disabled" style="grid-column: 1 / -1;" onclick="showTaobaoComingSoon('${item.name}')">${tr("btn.taobao")}</button>
       </div>
     `;
   } else if (item.platform === "windows") {
@@ -294,11 +299,16 @@ function createSoftwareCard(item, mode = "column") {
   `;
 }
 
-function showTaobaoComingSoon() {
+function showTaobaoComingSoon(appName = "HardwareLens") {
   ensureModalsExist();
   document.getElementById("noticeModalTitle").textContent = tr("toast.taobao_soon");
-  document.getElementById("noticeModalDesc").textContent = tr("taobao.modal_desc");
-  document.getElementById("noticePayBtn").textContent = tr("btn.buy_license");
+  document.getElementById("noticeModalDesc").textContent = appName === "ForceUninstaller" ? tr("fu.taobao_modal_desc") : tr("taobao.modal_desc");
+  const payBtn = document.getElementById("noticePayBtn");
+  payBtn.textContent = tr("btn.buy_license");
+  payBtn.onclick = () => {
+    closeModal("noticeModal");
+    openPaymentModal(appName);
+  };
   document.getElementById("noticeOkBtn").textContent = tr("taobao.modal_ok");
   document.getElementById("noticeModal").classList.add("open");
 }
@@ -523,9 +533,9 @@ function openManualVerifyModal(item) {
   document.getElementById("verifyModal").classList.add("open");
 }
 
-function openPaymentModal() {
+function openPaymentModal(appName = "HardwareLens") {
   ensureModalsExist();
-  document.getElementById("payModalTitle").textContent = tr("pay.title");
+  document.getElementById("payModalTitle").textContent = appName === "ForceUninstaller" ? tr("fu.pay_title") : tr("pay.title");
   document.getElementById("payPricingBar").textContent = `${tr("hl.t_month")} ${tr("hl.p_month")} · ${tr("hl.t_quarter")} ${tr("hl.p_quarter")} · ${tr("hl.t_year")} ${tr("hl.p_year")} · ${tr("hl.t_perm")} ${tr("hl.p_perm")}`;
   document.getElementById("payTabWechat").textContent = tr("pay.wechat");
   document.getElementById("payTabAlipay").textContent = tr("pay.alipay");

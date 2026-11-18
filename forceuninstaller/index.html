@@ -6,7 +6,7 @@
   <title>ForceUninstaller — LubitSoft</title>
   <script>(function(){var m=localStorage.getItem("lubitsoft_theme")||"auto";var d=m==="auto"?window.matchMedia("(prefers-color-scheme: dark)").matches:m==="dark";document.documentElement.setAttribute("data-theme",d?"dark":"light");document.documentElement.style.backgroundColor=d?"#0B1120":"#FFFFFF";})();</script>
   <link rel="icon" type="image/png" href="../assets/forceuninstaller-logo.png" />
-  <link rel="stylesheet" href="../css/style.css?v=2026111801" />
+  <link rel="stylesheet" href="../css/style.css?v=2026111802" />
 </head>
 <body data-page="channel">
   <header class="site-header">
@@ -35,9 +35,9 @@
       <div>
         <span class="portal-pill" style="background:rgba(255,255,255,0.2); color:#FFFFFF;" data-i18n="ch.pill">● LubitSoft 官方专属下载渠道</span>
         <h1>ForceUninstaller</h1>
-        <p data-i18n="fu.sub">轻量高效的 Windows 强力卸载与系统残留深度清理工具，免费开源，支持 Windows 10 与 Windows 11。</p>
+        <p data-i18n="fu.sub">轻量高效的 Windows 强力卸载与系统残留深度清理工具，基础功能免费，部分高级功能收费，支持 Windows 10 与 Windows 11。</p>
         <div class="channel-meta-pills">
-          <span class="channel-pill" data-i18n="fu.meta5">授权：免费软件</span>
+          <span class="channel-pill" data-i18n="fu.meta5">授权：基础免费 · 部分功能收费</span>
           <span class="channel-pill" data-i18n="fu.meta1">版本：v1.0.0</span>
           <span class="channel-pill" data-i18n="fu.meta2">系统要求：Windows 10 / Windows 11</span>
           <span class="channel-pill" data-i18n="fu.meta3">安装包：ForceUninstaller_Setup_v1.0.0.exe</span>
@@ -46,6 +46,12 @@
         <div style="display:flex; flex-wrap:wrap; gap:12px;">
           <button type="button" class="btn btn-primary" onclick="startApkDownload(event, 'win-forceuninstaller')" data-i18n="fu.dl_btn">
             ⬇ 下载安装程序 (16.48 MB)
+          </button>
+          <button type="button" class="btn btn-android" onclick="openPaymentModal('ForceUninstaller')" data-i18n="btn.buy_license">
+            微信 / 支付宝付款
+          </button>
+          <button type="button" class="btn btn-taobao-disabled" onclick="showTaobaoComingSoon('ForceUninstaller')" data-i18n="btn.taobao">
+            淘宝官方店铺购买
           </button>
         </div>
       </div>
@@ -75,9 +81,71 @@
             <p data-i18n="fu.f3_d">支持高分辨率屏幕清晰显示与自动管理员权限提权，操作直观流畅。</p>
           </div>
           <div class="feature-box">
-            <h4 data-i18n="fu.f4_t">🎁 纯净免费无捆绑</h4>
-            <p data-i18n="fu.f4_d">完全免费使用，无任何广告弹窗或第三方捆绑插件，安全可靠。</p>
+            <h4 data-i18n="fu.f4_t">💎 高级付费功能（Pro 解锁）</h4>
+            <p data-i18n="fu.f4_d">「迁移至其他盘符」与「选中多个软件同时卸载」为软件内付费功能，购买激活码即可解锁。</p>
           </div>
+        </div>
+
+        <hr style="border:none; border-top:1px solid var(--border-color); margin: 32px 0;" />
+
+        <h3 style="font-size:1.3rem; margin-bottom:8px;" data-i18n="fu.paid_section_t">免费与付费功能说明</h3>
+        <p style="color: var(--text-secondary); font-size:0.94rem; margin-bottom: 18px;" data-i18n="fu.paid_section_desc">
+          ForceUninstaller 的单个软件强力卸载与残留清理功能可免费使用；以下两项高级功能为软件内收费功能，需购买激活码解锁：
+        </p>
+
+        <div class="feature-list-grid" style="margin-bottom: 28px;">
+          <div class="feature-box">
+            <h4 data-i18n="fu.paid_f1_t">📦 迁移至其他盘符（付费功能）</h4>
+            <p data-i18n="fu.paid_f1_d">安全将已安装软件迁移至其他磁盘分区，有效释放系统盘（C 盘）空间，免去重装烦恼。</p>
+          </div>
+          <div class="feature-box">
+            <h4 data-i18n="fu.paid_f2_t">☑️ 选中多个软件同时卸载（付费功能）</h4>
+            <p data-i18n="fu.paid_f2_d">支持勾选多个目标软件一键批量强力卸载，并同步清理各自残留文件与注册表项。</p>
+          </div>
+        </div>
+
+        <h3 style="font-size:1.3rem; margin-bottom:8px;" data-i18n="hl.pricing_title">授权方案与价格（人民币）</h3>
+        <p style="color: var(--text-secondary); font-size:0.92rem;" data-i18n="hl.channel_note">
+          仅支持微信、支付宝人民币渠道收款，以及淘宝官方店铺购买激活码（淘宝官方店铺目前暂未开放）。
+        </p>
+
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th data-i18n="hl.col_plan">授权方案</th>
+              <th style="text-align:right;" data-i18n="hl.col_price">价格（人民币）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-i18n="fu.t_basic">基础功能（单个强力卸载 / 残留清理）</td>
+              <td data-i18n="fu.p_basic">永久免费</td>
+            </tr>
+            <tr>
+              <td data-i18n="hl.t_month">月卡</td>
+              <td data-i18n="hl.p_month">¥3</td>
+            </tr>
+            <tr>
+              <td data-i18n="hl.t_quarter">季卡</td>
+              <td data-i18n="hl.p_quarter">¥5</td>
+            </tr>
+            <tr>
+              <td data-i18n="hl.t_year">年卡</td>
+              <td data-i18n="hl.p_year">¥10</td>
+            </tr>
+            <tr>
+              <td data-i18n="hl.t_perm">永久激活</td>
+              <td data-i18n="hl.p_perm">¥20</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="pay-notice" data-i18n="pay.step_note" data-i18n-html>
+          请使用对应 App 扫描上方收款码完成人民币支付（月卡 ¥3 / 季卡 ¥5 / 年卡 ¥10 / 永久 ¥20）。支付成功后，请将以下 4 项信息发送至 <strong>payment@lubitsoft.com</strong> 申请激活码：<br>1. 付款截图<br>2. 交易单号<br>3. 购买的激活时长（月卡 / 季卡 / 年卡 / 永久激活）<br>4. 软件提供的机器码<br>我们会在 <strong>24 小时内</strong> 处理您的购买申请，并将激活码发送至您的买家邮箱。
+        </div>
+        <div style="margin-top: 16px; display:flex; flex-wrap:wrap; gap:12px;">
+          <button type="button" class="btn btn-android" onclick="openPaymentModal('ForceUninstaller')" data-i18n="btn.buy_license">微信 / 支付宝付款</button>
+          <button type="button" class="btn btn-taobao-disabled" onclick="showTaobaoComingSoon('ForceUninstaller')" data-i18n="btn.taobao">淘宝官方店铺购买</button>
         </div>
       </div>
     </div>
@@ -85,7 +153,7 @@
 
   <footer class="site-footer"></footer>
 
-  <script src="../js/i18n.js?v=2026111801"></script>
-  <script src="../js/main.js?v=2026111801"></script>
+  <script src="../js/i18n.js?v=2026111802"></script>
+  <script src="../js/main.js?v=2026111802"></script>
 </body>
 </html>
