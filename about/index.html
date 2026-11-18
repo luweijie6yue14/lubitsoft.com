@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — LubitSoft</title>
+  <script>(function(){var m=localStorage.getItem("lubitsoft_theme")||"auto";var d=m==="auto"?window.matchMedia("(prefers-color-scheme: dark)").matches:m==="dark";document.documentElement.setAttribute("data-theme",d?"dark":"light");document.documentElement.style.backgroundColor=d?"#0B1120":"#FFFFFF";})();</script>
+  <link rel="icon" type="image/svg+xml" href="../logo-mark.svg" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body data-page="about">
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="/" class="brand-link">
+        <img src="../logo.svg" alt="LubitSoft Logo" />
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/" data-i18n="nav.home">官网首页</a></li>
+        <li><a href="/about" class="active" data-i18n="nav.about">关于公司</a></li>
+        <li><a href="/android" data-i18n="nav.android">Android 专栏</a></li>
+        <li><a href="/windows" data-i18n="nav.windows">Windows 专栏</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-banner">
+    <div class="container">
+      <h1 data-i18n="about.banner_t">关于 LubitSoft</h1>
+      <p data-i18n="about.banner_d">以工程匠心重塑日常软件体验，专注于轻量、纯净的 Android 与 Windows 实用工具研发。</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container about-grid">
+      <div>
+        <span class="section-tag" data-i18n="about.story_tag">Our Story & Mission</span>
+        <h2 class="section-title" style="margin-bottom: 18px;" data-i18n="about.story_t">让卓越软件回归纯净</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 16px;" data-i18n="about.story_p1">
+          LubitSoft 是一家专注于研发高品质 Android 与 Windows 实用工具软件的独立科技品牌。我们热爱简洁直观的交互设计与稳健的系统底层技术。
+        </p>
+        <p style="color: var(--text-secondary); margin-bottom: 24px;" data-i18n="about.story_p2">
+          在软件日益臃肿的今天，LubitSoft 始终坚持“Light, Unified, Bit-perfect”（轻盈、统一、精微）的产品哲学，打造零广告、零冗余、隐私优先的工具应用。
+        </p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a href="/android" class="btn btn-android" data-i18n="hero.cta_android">探索 Android 专栏</a>
+          <a href="/windows" class="btn btn-windows" data-i18n="hero.cta_windows">探索 Windows 专栏</a>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-subtle); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 36px; text-align:center;">
+        <img src="../logo.svg" alt="LubitSoft Brand" style="max-width: 280px; width: 100%; margin-bottom: 20px;" />
+        <h4 style="margin-bottom: 8px;" data-i18n="about.logo_t">LubitSoft 品牌标识释义</h4>
+        <p style="font-size: 0.9rem; color: var(--text-secondary);" data-i18n="about.logo_d">
+          图形标志以几何棱角 “L” 象征稳健的软件底座，右上角跃动的青蓝色数字方格代表灵动的 “Bit（比特）” 创新单元，传达清爽、简洁、可信赖的科技感。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top:none; padding-top:0;">
+        <span data-i18n="footer.copy">© 2026 LubitSoft Inc. All rights reserved.</span>
+        <span>contact@lubitsoft.com</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/i18n.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="22 22 64 64" width="128" height="128" fill="none">
+  <rect x="22" y="22" width="64" height="64" rx="14" fill="#FFFFFF" />
+  <path d="M 40.56,67.44 A 19,19 0 1,1 67.44,67.44" stroke="#F1F3F4" stroke-width="5.6" stroke-linecap="round" />
+  <path d="M 40.56,67.44 A 19,19 0 0,1 36.45,46.73" stroke="#1A73E8" stroke-width="5.6" stroke-linecap="round" />
+  <path d="M 36.45,46.73 A 19,19 0 0,1 54.0,35.0" stroke="#00ACC1" stroke-width="5.6" stroke-linecap="butt" />
+  <path d="M 54.0,35.0 A 19,19 0 0,1 71.55,46.73" stroke="#34A853" stroke-width="5.6" stroke-linecap="butt" />
+  <path d="M 71.55,46.73 A 19,19 0 0,1 67.44,67.44" stroke="#FBBC04" stroke-width="5.6" stroke-linecap="round" />
+  <path d="M50,43.2 L50,46.5 M54,43.2 L54,46.5 M58,43.2 L58,46.5 M50,61.5 L50,64.8 M54,61.5 L54,64.8 M58,61.5 L58,64.8 M43.2,50 L46.5,50 M43.2,54 L46.5,54 M43.2,58 L46.5,58 M61.5,50 L64.8,50 M61.5,54 L64.8,54 M61.5,58 L64.8,58" stroke="#00897B" stroke-width="1.6" stroke-linecap="round" />
+  <path d="M49.2,46.5 L58.8,46.5 A2.7,2.7 0 0,1 61.5,49.2 L61.5,58.8 A2.7,2.7 0 0,1 58.8,61.5 L49.2,61.5 A2.7,2.7 0 0,1 46.5,58.8 L46.5,49.2 A2.7,2.7 0 0,1 49.2,46.5 Z" fill="#FFFFFF" stroke="#1A73E8" stroke-width="1.9" />
+  <path d="M48.2,54 L51.0,54 L52.6,49.8 L55.4,58.2 L57.0,54 L59.8,54" stroke="#1A73E8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+</svg>

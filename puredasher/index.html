@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PureDasher — LubitSoft</title>
+  <script>(function(){var m=localStorage.getItem("lubitsoft_theme")||"auto";var d=m==="auto"?window.matchMedia("(prefers-color-scheme: dark)").matches:m==="dark";document.documentElement.setAttribute("data-theme",d?"dark":"light");document.documentElement.style.backgroundColor=d?"#0B1120":"#FFFFFF";})();</script>
+  <link rel="icon" type="image/svg+xml" href="../assets/puredasher-logo.svg" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body data-page="channel">
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="/" class="brand-link">
+        <img src="../logo.svg" alt="LubitSoft Logo" />
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/" data-i18n="nav.home">官网首页</a></li>
+        <li><a href="/about" data-i18n="nav.about">关于公司</a></li>
+        <li><a href="/android" class="active" data-i18n="nav.android">Android 专栏</a></li>
+        <li><a href="/windows" data-i18n="nav.windows">Windows 专栏</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-banner android-banner">
+    <div class="container channel-hero-grid">
+      <img src="../assets/puredasher-logo.svg" alt="PureDasher Logo" class="app-logo-lg" />
+      <div>
+        <span class="portal-pill" style="background:rgba(255,255,255,0.2); color:#FFFFFF;" data-i18n="ch.pill">● LubitSoft 官方专属下载渠道</span>
+        <h1>PureDasher</h1>
+        <p data-i18n="pd.sub">纯净极简的 Android 设备硬件仪表盘、库仑计电池健康监测与全尺寸桌面微件套件。零广告、零后台唤醒，让您全面掌控爱机状态。</p>
+        <div class="channel-meta-pills">
+          <span class="channel-pill" data-i18n="pd.meta1">版本：v2.1.0</span>
+          <span class="channel-pill" data-i18n="pd.meta2">包名：com.weijielu.puredasher</span>
+          <span class="channel-pill" data-i18n="pd.meta3">系统要求：Android 8.0+ (API 26+)</span>
+          <span class="channel-pill" data-i18n="pd.meta4">授权：免费正版</span>
+        </div>
+        <div style="display:flex; flex-wrap:wrap; gap:12px;">
+          <a href="https://play.google.com/store/apps/details?id=com.weijielu.puredasher" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-i18n="ch.gp">
+            ▶ 前往 Google Play 下载
+          </a>
+          <button type="button" class="btn btn-gray" onclick="startApkDownload(event, 'and-puredasher')" data-i18n="pd.dl_btn">
+            ⬇ 官方直链 APK 下载 (2.05 MB)
+          </button>
+          <a href="/privacy-puredasher" class="btn btn-outline" style="background:rgba(255,255,255,0.12); color:#FFFFFF; border-color:rgba(255,255,255,0.35);" data-i18n="ch.privacy">
+            查看隐私权政策
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="channel-card">
+        <span class="section-tag" data-i18n="ch.overview">Software Overview</span>
+        <h2 class="section-title" style="margin-bottom: 14px;" data-i18n="ch.overview_t">软件简介与核心特性</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 20px;" data-i18n="pd.desc">
+          PureDasher 采用原生 Kotlin 与 Jetpack Compose 倾力打造，专为追求极致轻盈与透明掌控感的 Android 用户设计。软件集成了精密的电池库仑计健康监测服务、一站式设备状态中心以及五种桌面微件，所有核心数据均在设备本地实时演算呈现。
+        </p>
+
+        <div class="feature-list-grid">
+          <div class="feature-box">
+            <h4 data-i18n="pd.f1_t">🔋 电池健康库仑计监测</h4>
+            <p data-i18n="pd.f1_d">内置轻量级前台监测服务，精确追踪充放电电流、电池温度、循环健康度与预估续航，支持自定义充电保护提醒。</p>
+          </div>
+          <div class="feature-box">
+            <h4 data-i18n="pd.f2_t">🧩 5 种比例桌面微件矩阵</h4>
+            <p data-i18n="pd.f2_d">原生提供 2×1 极简胶囊、2×2 紧凑方格、4×1 极简横条、4×2 详细仪表盘与 4×3 全景监控面板，完美适配各类桌面布局。</p>
+          </div>
+          <div class="feature-box">
+            <h4 data-i18n="pd.f3_t">🛡️ 透明设备权限中心</h4>
+            <p data-i18n="pd.f3_d">清晰展示网络、定位、通知及电池优化状态，支持一键直达系统设置开启或关闭可选进阶权限，绝不强制索权。</p>
+          </div>
+          <div class="feature-box">
+            <h4 data-i18n="pd.f4_t">🌐 轻量化多语言引擎</h4>
+            <p data-i18n="pd.f4_d">支持在线多语言包即时切换与 Material 3 动态取色主题，安装包小巧纯净，无任何第三方广告 SDK。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top:none; padding-top:0;">
+        <span data-i18n="footer.copy">© 2026 LubitSoft Inc. All rights reserved.</span>
+        <div style="display:flex; gap:18px;">
+          <a href="/privacy-puredasher" style="color:#CBD5E1;" data-i18n="footer.l_ppd">PureDasher 隐私权政策</a>
+          <a href="/android" style="color:#CBD5E1;" data-i18n="nav.android">Android 专栏</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/i18n.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

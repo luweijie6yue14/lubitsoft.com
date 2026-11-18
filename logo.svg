@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 100" width="420" height="100" fill="none">
+  <defs>
+    <linearGradient id="lubit-grad-main" x1="16" y1="16" x2="88" y2="88" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0052FF"/>
+      <stop offset="100%" stop-color="#00C6FF"/>
+    </linearGradient>
+    <linearGradient id="lubit-grad-dark" x1="14" y1="14" x2="72" y2="86" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0A2540"/>
+      <stop offset="100%" stop-color="#0052FF"/>
+    </linearGradient>
+    <linearGradient id="lubit-bit" x1="54" y1="14" x2="84" y2="44" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="100%" stop-color="#007BFF"/>
+    </linearGradient>
+  </defs>
+  <!-- Icon Mark -->
+  <g transform="translate(8, 10) scale(0.8)">
+    <path d="M12 12C12 6.47715 16.4772 2 22 2H34C39.5228 2 44 6.47715 44 12V66H88C93.5228 66 98 70.4772 98 76V88C98 93.5228 93.5228 98 88 98H26C18.268 98 12 91.732 12 84V12Z" fill="url(#lubit-grad-dark)"/>
+    <path d="M32 66H88C93.5228 66 98 70.4772 98 76V88C98 93.5228 93.5228 98 88 98H44C37.3726 98 32 92.6274 32 86V66Z" fill="url(#lubit-grad-main)" opacity="0.92"/>
+    <rect x="60" y="6" width="36" height="36" rx="10" fill="url(#lubit-bit)"/>
+    <circle cx="78" cy="24" r="6" fill="#FFFFFF" opacity="0.95"/>
+  </g>
+  <!-- Wordmark: LubitSoft -->
+  <text x="108" y="63" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="44" font-weight="800" letter-spacing="-1.2" fill="#0A2540">Lubit<tspan fill="#0066FF" font-weight="700">Soft</tspan></text>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" fill="none">
+  <defs>
+    <linearGradient id="lubit-grad-main" x1="16" y1="16" x2="112" y2="112" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0052FF"/>
+      <stop offset="100%" stop-color="#00C6FF"/>
+    </linearGradient>
+    <linearGradient id="lubit-grad-dark" x1="20" y1="20" x2="88" y2="108" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0A2540"/>
+      <stop offset="100%" stop-color="#0052FF"/>
+    </linearGradient>
+    <linearGradient id="lubit-bit" x1="72" y1="20" x2="108" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="100%" stop-color="#007BFF"/>
+    </linearGradient>
+  </defs>
+  <!-- Outer subtle rounded container (optional clean badge) -->
+  <rect x="4" y="4" width="120" height="120" rx="28" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="2"/>
+  <!-- Primary geometric 'L' ribbon -->
+  <path d="M30 28C30 23.5817 33.5817 20 38 20H48C52.4183 20 56 23.5817 56 28V74H94C98.4183 74 102 77.5817 102 82V92C102 96.4183 98.4183 100 94 100H42C35.3726 100 30 94.6274 30 88V28Z" fill="url(#lubit-grad-dark)"/>
+  <!-- Overlapping dynamic 'L' light-fold accent -->
+  <path d="M46 74H94C98.4183 74 102 77.5817 102 82V92C102 96.4183 98.4183 100 94 100H56C50.4772 100 46 95.5228 46 90V74Z" fill="url(#lubit-grad-main)" opacity="0.92"/>
+  <!-- Floating luminous 'Bit' node -->
+  <rect x="70" y="24" width="30" height="30" rx="8" fill="url(#lubit-bit)"/>
+  <!-- Precision inner spark/dot -->
+  <circle cx="85" cy="39" r="5" fill="#FFFFFF" opacity="0.95"/>
+</svg>

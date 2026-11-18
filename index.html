@@ -1,0 +1,240 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LubitSoft — Android & Windows Official Software</title>
+  <script>(function(){var m=localStorage.getItem("lubitsoft_theme")||"auto";var d=m==="auto"?window.matchMedia("(prefers-color-scheme: dark)").matches:m==="dark";document.documentElement.setAttribute("data-theme",d?"dark":"light");document.documentElement.style.backgroundColor=d?"#0B1120":"#FFFFFF";})();</script>
+  <link rel="icon" type="image/svg+xml" href="logo-mark.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="home">
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="/" class="brand-link">
+        <img src="logo.svg" alt="LubitSoft Logo" />
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/" class="active" data-i18n="nav.home">官网首页</a></li>
+        <li><a href="/about" data-i18n="nav.about">关于公司</a></li>
+        <li><a href="/android" data-i18n="nav.android">Android 专栏</a></li>
+        <li><a href="/windows" data-i18n="nav.windows">Windows 专栏</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="hero-badge" data-i18n="hero.badge">✦ LubitSoft 软件生态中心</div>
+        <h1 data-i18n="hero.title" data-i18n-html>为移动与桌面设备打造<span>极致、纯净</span>的实用工具</h1>
+        <p class="hero-desc" data-i18n="hero.desc">
+          LubitSoft 专注于研发轻量、安全、无广告的 Android 与 Windows 原生软件。提供官方直链 APK 下载与 Google Play 正版分发，让每一台设备发挥卓越潜能。
+        </p>
+        <div class="hero-cta">
+          <a href="/android" class="btn btn-android" data-i18n="hero.cta_android">探索 Android 专栏</a>
+          <a href="/windows" class="btn btn-windows" data-i18n="hero.cta_windows">探索 Windows 专栏</a>
+          <a href="/about" class="btn btn-outline" data-i18n="hero.cta_about">了解 LubitSoft</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <strong data-i18n="hero.stat1_val">100%</strong>
+            <span data-i18n="hero.stat1_lbl">原生 Kotlin 构建</span>
+          </div>
+          <div class="stat-item">
+            <strong data-i18n="hero.stat2_val">零广告</strong>
+            <span data-i18n="hero.stat2_lbl">本地优先隐私架构</span>
+          </div>
+          <div class="stat-item">
+            <strong data-i18n="hero.stat3_val">SHA-256</strong>
+            <span data-i18n="hero.stat3_lbl">官方签名校验保障</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-showcase">
+        <div class="showcase-header">
+          <div class="showcase-dots"><span></span><span></span><span></span></div>
+          <span style="font-size:0.8rem; color: var(--text-muted); font-weight:600;" data-i18n="hero.showcase_hdr">官方正式上架应用</span>
+        </div>
+
+        <div class="showcase-item" onclick="navigateCard(event, '/puredasher')">
+          <div class="showcase-meta">
+            <img class="app-logo-img" src="assets/puredasher-logo.svg" alt="PureDasher Logo" />
+            <div>
+              <strong>PureDasher</strong>
+              <div style="font-size:0.8rem; color:var(--text-muted);">Android 8.0+ · v2.1.0 · 2.05 MB</div>
+            </div>
+          </div>
+          <div class="showcase-actions">
+            <a class="btn btn-sm btn-android" href="https://play.google.com/store/apps/details?id=com.weijielu.puredasher" target="_blank" rel="noopener noreferrer" data-i18n="btn.gp_dl">Google Play 下载</a>
+          </div>
+        </div>
+
+        <div class="showcase-item" onclick="navigateCard(event, '/aircompass')">
+          <div class="showcase-meta">
+            <img class="app-logo-img" src="assets/aircompass-logo.png" alt="AirCompass Logo" />
+            <div>
+              <strong>AirCompass</strong>
+              <div style="font-size:0.8rem; color:var(--text-muted);">Android 8.0+ · v2.2.0 · 8.20 MB</div>
+            </div>
+          </div>
+          <div class="showcase-actions">
+            <a class="btn btn-sm btn-android" href="https://play.google.com/store/apps/details?id=com.weijielu.aircompass" target="_blank" rel="noopener noreferrer" data-i18n="btn.gp_dl">Google Play 下载</a>
+          </div>
+        </div>
+
+        <div class="showcase-item" onclick="navigateCard(event, '/hardwarelens')">
+          <div class="showcase-meta">
+            <img class="app-logo-img" src="assets/hardwarelens-logo.png" alt="HardwareLens Logo" />
+            <div>
+              <strong>HardwareLens</strong>
+              <div style="font-size:0.8rem; color:var(--text-muted);">Windows 10 / 11 · v1.0.0 · 54.82 MB</div>
+            </div>
+          </div>
+          <div class="showcase-actions">
+            <button type="button" class="btn btn-sm btn-windows" onclick="startApkDownload(event, 'win-hardwarelens')" data-i18n="btn.dl_installer">下载安装程序</button>
+            <button type="button" class="btn btn-sm btn-android" onclick="openPaymentModal()" data-i18n="btn.buy_license">微信 / 支付宝付款</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dual Platform Portals -->
+  <section class="section section-subtle">
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-tag" data-i18n="portal.tag">Platform Solutions</span>
+        <h2 class="section-title" data-i18n="portal.title">两大核心软件专栏，一站式官方分发</h2>
+        <p class="section-subtitle" data-i18n="portal.sub">针对移动便携与桌面办公场景深度打磨，提供官方直链安全下载与透明清晰的隐私合规保障。</p>
+      </div>
+
+      <div class="portal-grid">
+        <div class="portal-card android">
+          <div>
+            <span class="portal-pill android" data-i18n="portal.and_pill">● Android 移动生态专栏</span>
+            <h3 data-i18n="portal.and_title">安卓软件下载与服务</h3>
+            <p data-i18n="portal.and_desc">面向智能手机与平板电脑打造，目前已正式上架 PureDasher 与 AirCompass，全系采用 Material 极简设计与低功耗本地架构。</p>
+            <ul class="portal-features">
+              <li data-i18n="portal.and_f1">官方直签 Universal APK</li>
+              <li data-i18n="portal.and_f2">零后台唤醒与低耗电</li>
+              <li data-i18n="portal.and_f3">支持 Google Play / 官网直装</li>
+              <li data-i18n="portal.and_f4">无开屏广告与恶意弹窗</li>
+            </ul>
+          </div>
+          <div>
+            <a href="/android" class="btn btn-android" data-i18n="portal.and_btn">进入 Android 软件专栏 →</a>
+          </div>
+        </div>
+
+        <div class="portal-card windows">
+          <div>
+            <span class="portal-pill windows" data-i18n="portal.win_pill">■ Windows 桌面生态专栏</span>
+            <h3 data-i18n="portal.win_title">Windows 软件研发中心</h3>
+            <p data-i18n="portal.win_desc">面向 Windows 10 / 11 桌面平台的效率与系统工具正在研发打磨中，即将陆续发布原生 x64 与 ARM64 版本。</p>
+            <ul class="portal-features">
+              <li data-i18n="portal.win_f1">原生 x64 & ARM64 架构</li>
+              <li data-i18n="portal.win_f2">数字签名安全认证</li>
+              <li data-i18n="portal.win_f3">绿色免安装与标准安装包</li>
+              <li data-i18n="portal.win_f4">零捆绑无弹窗体验</li>
+            </ul>
+          </div>
+          <div>
+            <a href="/windows" class="btn btn-windows" data-i18n="portal.win_btn">查看 Windows 专栏 →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Software -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <span class="section-tag" data-i18n="feat.tag">Official Releases</span>
+          <h2 class="section-title" data-i18n="feat.title">正式上架应用</h2>
+        </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a href="/android" class="btn btn-sm btn-outline" data-i18n="feat.btn_all_and">全部安卓软件</a>
+          <a href="/windows" class="btn btn-sm btn-outline" data-i18n="feat.btn_all_win">Windows 专栏</a>
+        </div>
+      </div>
+      <div class="software-grid" id="featuredGrid"></div>
+    </div>
+  </section>
+
+  <!-- Engineering Standards -->
+  <section class="section section-subtle">
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-tag" data-i18n="trust.tag">Why LubitSoft</span>
+        <h2 class="section-title" data-i18n="trust.title">严苛的研发标准与安全承诺</h2>
+        <p class="section-subtitle" data-i18n="trust.sub">从代码编译到安装包分发，LubitSoft 坚持纯净、透明、隐私优先的工程准则。</p>
+      </div>
+
+      <div class="trust-grid">
+        <div class="trust-card">
+          <div class="trust-icon">🛡️</div>
+          <h4 data-i18n="trust.t1_t">安全纯净无捆绑</h4>
+          <p data-i18n="trust.t1_d">所有安装包均提供官方 SHA-256 校验值与签名认证，绝不捆绑任何第三方推广软件。</p>
+        </div>
+        <div class="trust-card">
+          <div class="trust-icon">⚡</div>
+          <h4 data-i18n="trust.t2_t">官方直链高速下载</h4>
+          <p data-i18n="trust.t2_d">官网直接托管正式版 APK 安装包，并同步提供 Google Play 商店官方下载渠道。</p>
+        </div>
+        <div class="trust-card">
+          <div class="trust-icon">🔑</div>
+          <h4 data-i18n="trust.t3_t">本地优先隐私保护</h4>
+          <p data-i18n="trust.t3_d">传感器遥测与设备健康数据均在本地实时计算，绝不后台静默收集或出售个人数据。</p>
+        </div>
+        <div class="trust-card">
+          <div class="trust-icon">🌐</div>
+          <h4 data-i18n="trust.t4_t">多语言国际化适配</h4>
+          <p data-i18n="trust.t4_d">全线产品与官方网站支持多国语言切换，为全球不同地区用户提供一致的清爽体验。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (3 columns, no brand assets column) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="logo-dark.svg" alt="LubitSoft Logo" />
+          <p data-i18n="footer.desc">LubitSoft 专注于研发轻量、纯净、安全可靠的跨平台实用工具软件，服务 Android 与 Windows 用户。</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.col1">软件专栏</h4>
+          <ul>
+            <li><a href="/android" data-i18n="footer.l_and">Android 软件下载</a></li>
+            <li><a href="/windows" data-i18n="footer.l_win">Windows 软件专栏</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.col2">关于公司</h4>
+          <ul>
+            <li><a href="/" data-i18n="nav.home">官网首页</a></li>
+            <li><a href="/about" data-i18n="footer.l_about">公司简介与愿景</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span data-i18n="footer.copy">© 2026 LubitSoft Inc. All rights reserved.</span>
+        <span data-i18n="footer.slogan">纯净软件 · 安全下载 · 隐私优先</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

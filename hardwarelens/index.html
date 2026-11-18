@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HardwareLens — LubitSoft</title>
+  <script>(function(){var m=localStorage.getItem("lubitsoft_theme")||"auto";var d=m==="auto"?window.matchMedia("(prefers-color-scheme: dark)").matches:m==="dark";document.documentElement.setAttribute("data-theme",d?"dark":"light");document.documentElement.style.backgroundColor=d?"#0B1120":"#FFFFFF";})();</script>
+  <link rel="icon" type="image/png" href="../assets/hardwarelens-logo.png" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body data-page="channel">
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="/" class="brand-link">
+        <img src="../logo.svg" alt="LubitSoft Logo" />
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/" data-i18n="nav.home">官网首页</a></li>
+        <li><a href="/about" data-i18n="nav.about">关于公司</a></li>
+        <li><a href="/android" data-i18n="nav.android">Android 专栏</a></li>
+        <li><a href="/windows" class="active" data-i18n="nav.windows">Windows 专栏</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-banner windows-banner">
+    <div class="container channel-hero-grid">
+      <img src="../assets/hardwarelens-logo.png" alt="HardwareLens Logo" class="app-logo-lg" />
+      <div>
+        <span class="portal-pill" style="background:rgba(255,255,255,0.2); color:#FFFFFF;" data-i18n="ch.pill">● LubitSoft 官方专属下载渠道</span>
+        <h1>HardwareLens</h1>
+        <p data-i18n="hl.sub">现代化的 Windows 硬件设备信息检测与实时监控工具，全面支持 Windows 10 与 Windows 11。</p>
+        <div class="channel-meta-pills">
+          <span class="channel-pill" data-i18n="hl.badge_paid">付费软件 · 1小时免费试用</span>
+          <span class="channel-pill" data-i18n="hl.meta1">版本：v1.0.0</span>
+          <span class="channel-pill" data-i18n="hl.meta2">系统要求：Windows 10 / Windows 11</span>
+          <span class="channel-pill" data-i18n="hl.meta3">安装包：HardwareLens_Setup_v1.0.0.exe</span>
+          <span class="channel-pill" data-i18n="hl.meta4">大小：54.82 MB</span>
+        </div>
+        <div style="display:flex; flex-wrap:wrap; gap:12px;">
+          <button type="button" class="btn btn-primary" onclick="startApkDownload(event, 'win-hardwarelens')" data-i18n="hl.dl_btn">
+            ⬇ 下载安装程序 (54.82 MB)
+          </button>
+          <button type="button" class="btn btn-android" onclick="openPaymentModal()" data-i18n="btn.buy_license">
+            微信 / 支付宝付款
+          </button>
+          <button type="button" class="btn btn-taobao-disabled" onclick="showTaobaoComingSoon()" data-i18n="btn.taobao">
+            淘宝官方店铺购买
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="channel-card">
+        <span class="section-tag" data-i18n="ch.overview">Software Overview</span>
+        <h2 class="section-title" style="margin-bottom: 14px;" data-i18n="ch.overview_t">软件简介与核心特性</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 20px;" data-i18n="hl.desc">
+          HardwareLens（硬件视界）是一款面向 Windows 10 与 Windows 11 的现代化硬件设备信息检测与实时监控工具。内置实时性能环形仪表盘，全面采集 CPU、内存、显卡、存储、主板 BIOS、网络适配器、USB 外设与电池健康状态，并支持深浅双主题与一键导出完整硬件报告。
+        </p>
+
+        <div class="feature-list-grid">
+          <div class="feature-box">
+            <h4 data-i18n="hl.f1_t">📊 实时系统概览仪表盘</h4>
+            <p data-i18n="hl.f1_d">实时展示 CPU、内存、磁盘使用率环形仪表盘与网络吞吐量，核心硬件摘要一目了然。</p>
+          </div>
+          <div class="feature-box">
+            <h4 data-i18n="hl.f2_t">🔍 全面硬件深度采集</h4>
+            <p data-i18n="hl.f2_d">精准识别处理器缓存、内存条颗粒与频率、独立/集成显卡、物理硬盘健康度及主板 SMBIOS 信息。</p>
+          </div>
+          <div class="feature-box">
+            <h4 data-i18n="hl.f3_t">🎨 现代化深浅双主题</h4>
+            <p data-i18n="hl.f3_d">支持浅色与深色主题一键切换及标题栏沉浸适配，支持关键词搜索过滤与属性值点击复制。</p>
+          </div>
+          <div class="feature-box">
+            <h4 data-i18n="hl.f4_t">📄 一键导出硬件报告</h4>
+            <p data-i18n="hl.f4_d">支持将完整本机硬件检测报告一键导出为 JSON、Markdown 或 TXT 格式，方便存档与排查。</p>
+          </div>
+        </div>
+
+        <hr style="border:none; border-top:1px solid var(--border-color); margin: 32px 0;" />
+
+        <h3 style="font-size:1.3rem; margin-bottom:8px;" data-i18n="hl.pricing_title">授权方案与价格（人民币）</h3>
+        <p style="color: var(--text-secondary); font-size:0.92rem;" data-i18n="hl.channel_note">
+          仅支持微信、支付宝人民币渠道收款，以及淘宝官方店铺购买激活码（淘宝官方店铺目前暂未开放）。
+        </p>
+
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th data-i18n="hl.col_plan">授权方案</th>
+              <th style="text-align:right;" data-i18n="hl.col_price">价格（人民币）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-i18n="hl.t_trial">新用户试用</td>
+              <td data-i18n="hl.p_trial">免费 1 小时</td>
+            </tr>
+            <tr>
+              <td data-i18n="hl.t_month">月卡</td>
+              <td data-i18n="hl.p_month">¥3</td>
+            </tr>
+            <tr>
+              <td data-i18n="hl.t_quarter">季卡</td>
+              <td data-i18n="hl.p_quarter">¥5</td>
+            </tr>
+            <tr>
+              <td data-i18n="hl.t_year">年卡</td>
+              <td data-i18n="hl.p_year">¥10</td>
+            </tr>
+            <tr>
+              <td data-i18n="hl.t_perm">永久激活</td>
+              <td data-i18n="hl.p_perm">¥20</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="pay-notice" data-i18n="pay.step_note" data-i18n-html>
+          请使用对应 App 扫描上方收款码完成人民币支付（月卡 ¥3 / 季卡 ¥5 / 年卡 ¥10 / 永久 ¥20）。支付成功后，请将以下 4 项信息发送至 <strong>payment@lubitsoft.com</strong> 申请激活码：<br>1. 付款截图<br>2. 交易单号<br>3. 购买的激活时长（月卡 / 季卡 / 年卡 / 永久激活）<br>4. 软件提供的机器码<br>我们会在 <strong>24 小时内</strong> 处理您的购买申请，并将激活码发送至您的买家邮箱。
+        </div>
+        <div style="margin-top: 16px; display:flex; flex-wrap:wrap; gap:12px;">
+          <button type="button" class="btn btn-android" onclick="openPaymentModal()" data-i18n="btn.buy_license">微信 / 支付宝付款</button>
+          <button type="button" class="btn btn-taobao-disabled" onclick="showTaobaoComingSoon()" data-i18n="btn.taobao">淘宝官方店铺购买</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer"></footer>
+
+  <script src="../js/i18n.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
