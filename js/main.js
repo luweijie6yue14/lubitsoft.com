@@ -35,6 +35,24 @@ const LUBIT_CATALOG = [
     sha256: "ce26ef8910f15cfc6f3b2b8cea3c4eed5d54dc2f8ff6e2eec89c2eb21e7c9409"
   },
   {
+    id: "and-dinohd",
+    platform: "android",
+    isGame: true,
+    playBetaPending: true,
+    name: "Dino HD",
+    version: "v1.4.0",
+    size: "3.29 MB",
+    req: "Android 7.0+ (API 24+)",
+    iconImg: `${ASSET_PREFIX}assets/dinohd-logo.png`,
+    apkUrl: `${ASSET_PREFIX}downloads/DinoHD_v1.4.0-release.apk`,
+    apkFileName: "DinoHD_v1.4.0-release.apk",
+    packageId: "com.dinohd.game",
+    detailPage: "/dinohd",
+    privacyPage: "/privacy-dinohd",
+    playUrl: "",
+    sha256: "c2d1007ca57799575020827dcbd4d6a93d55d658afb44980dabeaa38b82743d4"
+  },
+  {
     id: "win-hardwarelens",
     platform: "windows",
     isPaid: true,
@@ -72,6 +90,8 @@ const FALLBACK_TEXT = {
   "btn.free_software": "免费软件",
   "btn.buy_license": "微信 / 支付宝付款",
   "btn.taobao": "淘宝官方店铺购买",
+  "gp.beta_title": "Beta 尝鲜阶段提示",
+  "gp.beta_desc": "Beta 尝鲜阶段尚未上传 Google Play，敬请期待！目前您可通过官网直链或 LubitSoft 官方 App 直接下载正版 APK 安装包。",
   "toast.taobao_soon": "淘宝官方店铺即将开放，敬请期待！",
   "taobao.modal_desc": "淘宝官方店铺正在筹备上线中，即将开放，敬请期待！目前您可通过微信或支付宝渠道购买 HardwareLens 正版激活码。",
   "taobao.modal_ok": "我知道了",
@@ -262,6 +282,24 @@ function createSoftwareCard(item, mode = "column") {
         <button type="button" class="btn btn-sm btn-windows" onclick="startApkDownload(event, '${item.id}')">${tr("btn.dl_installer")}</button>
       </div>
     `;
+  } else if (item.playBetaPending) {
+    const privacyHref = resolveLocalUrl(item.privacyPage);
+    if (mode === "home") {
+      actionsHtml = `
+        <div class="card-actions-grid">
+          <button type="button" class="btn btn-sm" style="background:#CBD5E1; color:#475569; border:1px solid #94A3B8;" onclick="showGooglePlayBetaNotice(event)">${tr("btn.gp_dl")}</button>
+          <button type="button" class="btn btn-sm btn-android" onclick="startApkDownload(event, '${item.id}')">${tr("btn.apk_backup")}</button>
+        </div>
+      `;
+    } else {
+      actionsHtml = `
+        <div class="card-actions-grid">
+          <button type="button" class="btn btn-sm" style="background:#CBD5E1; color:#475569; border:1px solid #94A3B8;" onclick="showGooglePlayBetaNotice(event)">${tr("btn.gp_dl")}</button>
+          <button type="button" class="btn btn-sm btn-android" onclick="startApkDownload(event, '${item.id}')">${tr("btn.apk_backup")}</button>
+          <a class="btn btn-sm btn-outline" style="grid-column: 1 / -1;" href="${privacyHref}">${tr("btn.privacy")}</a>
+        </div>
+      `;
+    }
   } else if (mode === "home") {
     actionsHtml = `
       <div class="card-actions">
@@ -301,6 +339,21 @@ function createSoftwareCard(item, mode = "column") {
       ${actionsHtml}
     </article>
   `;
+}
+
+function showGooglePlayBetaNotice(evt) {
+  if (evt) evt.stopPropagation();
+  ensureModalsExist();
+  document.getElementById("noticeModalTitle").textContent = tr("gp.beta_title");
+  document.getElementById("noticeModalDesc").textContent = tr("gp.beta_desc");
+  const payBtn = document.getElementById("noticePayBtn");
+  payBtn.textContent = tr("btn.apk_backup");
+  payBtn.onclick = (e) => {
+    closeModal("noticeModal");
+    startApkDownload(e, "and-dinohd");
+  };
+  document.getElementById("noticeOkBtn").textContent = tr("taobao.modal_ok");
+  document.getElementById("noticeModal").classList.add("open");
 }
 
 function showTaobaoComingSoon(appName = "HardwareLens") {

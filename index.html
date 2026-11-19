@@ -109,6 +109,20 @@
           </div>
         </div>
 
+        <div class="showcase-item" onclick="navigateCard(event, '/dinohd')">
+          <div class="showcase-meta">
+            <img class="app-logo-img" src="assets/dinohd-logo.png" alt="Dino HD Logo" style="border-radius:10px;" />
+            <div>
+              <strong>Dino HD</strong>
+              <div style="font-size:0.8rem; color:var(--text-muted);">Android 7.0+ · v1.4.0 · 3.29 MB</div>
+            </div>
+          </div>
+          <div class="showcase-actions">
+            <button type="button" class="btn btn-sm" style="background:#CBD5E1; color:#475569; border:1px solid #94A3B8;" onclick="showGooglePlayBetaNotice(event)" data-i18n="btn.gp_dl">Google Play 下载</button>
+            <button type="button" class="btn btn-sm btn-android" onclick="startApkDownload(event, 'and-dinohd')" data-i18n="btn.apk_backup">下载 APK</button>
+          </div>
+        </div>
+
         <div class="showcase-item" onclick="navigateCard(event, '/hardwarelens')">
           <div class="showcase-meta">
             <img class="app-logo-img" src="assets/hardwarelens-logo.png" alt="HardwareLens Logo" />
