@@ -53,6 +53,24 @@ const LUBIT_CATALOG = [
     sha256: "c2d1007ca57799575020827dcbd4d6a93d55d658afb44980dabeaa38b82743d4"
   },
   {
+    id: "and-2048",
+    platform: "android",
+    isGame: true,
+    playBetaPending: true,
+    name: "2048",
+    version: "v1.2.0",
+    size: "5.18 MB",
+    req: "Android 7.0+ (API 24+)",
+    iconImg: `${ASSET_PREFIX}assets/game2048-logo.png`,
+    apkUrl: `${ASSET_PREFIX}downloads/Game2048_v1.2.0-release.apk`,
+    apkFileName: "Game2048_v1.2.0-release.apk",
+    packageId: "com.lubitsoft.game2048",
+    detailPage: "/game2048",
+    privacyPage: "/privacy-2048",
+    playUrl: "",
+    sha256: "37a5cf8b8168ccd1ee673e2fe9830daf5ab4197b544905f23981ffb73ae916c7"
+  },
+  {
     id: "win-hardwarelens",
     platform: "windows",
     isPaid: true,
@@ -287,14 +305,14 @@ function createSoftwareCard(item, mode = "column") {
     if (mode === "home") {
       actionsHtml = `
         <div class="card-actions-grid">
-          <button type="button" class="btn btn-sm" style="background:#CBD5E1; color:#475569; border:1px solid #94A3B8;" onclick="showGooglePlayBetaNotice(event)">${tr("btn.gp_dl")}</button>
+          <button type="button" class="btn btn-sm" style="background:#CBD5E1; color:#475569; border:1px solid #94A3B8;" onclick="showGooglePlayBetaNotice(event, '${item.id}')">${tr("btn.gp_dl")}</button>
           <button type="button" class="btn btn-sm btn-android" onclick="startApkDownload(event, '${item.id}')">${tr("btn.apk_backup")}</button>
         </div>
       `;
     } else {
       actionsHtml = `
         <div class="card-actions-grid">
-          <button type="button" class="btn btn-sm" style="background:#CBD5E1; color:#475569; border:1px solid #94A3B8;" onclick="showGooglePlayBetaNotice(event)">${tr("btn.gp_dl")}</button>
+          <button type="button" class="btn btn-sm" style="background:#CBD5E1; color:#475569; border:1px solid #94A3B8;" onclick="showGooglePlayBetaNotice(event, '${item.id}')">${tr("btn.gp_dl")}</button>
           <button type="button" class="btn btn-sm btn-android" onclick="startApkDownload(event, '${item.id}')">${tr("btn.apk_backup")}</button>
           <a class="btn btn-sm btn-outline" style="grid-column: 1 / -1;" href="${privacyHref}">${tr("btn.privacy")}</a>
         </div>
@@ -341,7 +359,7 @@ function createSoftwareCard(item, mode = "column") {
   `;
 }
 
-function showGooglePlayBetaNotice(evt) {
+function showGooglePlayBetaNotice(evt, itemId = "and-dinohd") {
   if (evt) evt.stopPropagation();
   ensureModalsExist();
   document.getElementById("noticeModalTitle").textContent = tr("gp.beta_title");
@@ -350,7 +368,7 @@ function showGooglePlayBetaNotice(evt) {
   payBtn.textContent = tr("btn.apk_backup");
   payBtn.onclick = (e) => {
     closeModal("noticeModal");
-    startApkDownload(e, "and-dinohd");
+    startApkDownload(e, itemId);
   };
   document.getElementById("noticeOkBtn").textContent = tr("taobao.modal_ok");
   document.getElementById("noticeModal").classList.add("open");
