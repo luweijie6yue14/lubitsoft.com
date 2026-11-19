@@ -48,7 +48,7 @@
             <div>
               <div style="font-size: 0.72rem; font-weight: 700; opacity: 0.9; margin-bottom: 2px;" data-i18n="app.badge">✦ 官方客户端 · Official Android App</div>
               <div style="font-size: 1rem; font-weight: 800; color: #FFFFFF;" data-i18n="app.title">LubitSoft 官方应用中心 App (v1.0.0)</div>
-              <div style="font-size: 0.8rem; color: rgba(255,255,255,0.85);" data-i18n="app.desc">Android 8.0+ · 18.19 MB · 一站式下载与自动更新提醒</div>
+              <div style="font-size: 0.8rem; color: rgba(255,255,255,0.85);" data-i18n="app.desc">Android 8.0+ · 12.88 MB · 一站式下载与自动更新提醒</div>
             </div>
           </div>
           <a href="downloads/LubitSoftApp_v1.0.0.apk" download="LubitSoftApp_v1.0.0.apk" class="btn btn-sm btn-android" style="white-space: nowrap; font-weight: 700;" data-i18n="app.dl_btn">
@@ -120,6 +120,20 @@
           <div class="showcase-actions">
             <button type="button" class="btn btn-sm" style="background:#CBD5E1; color:#475569; border:1px solid #94A3B8;" onclick="showGooglePlayBetaNotice(event)" data-i18n="btn.gp_dl">Google Play 下载</button>
             <button type="button" class="btn btn-sm btn-android" onclick="startApkDownload(event, 'and-dinohd')" data-i18n="btn.apk_backup">下载 APK</button>
+          </div>
+        </div>
+
+        <div class="showcase-item" onclick="navigateCard(event, '/game2048')">
+          <div class="showcase-meta">
+            <img class="app-logo-img" src="assets/game2048-logo.png" alt="2048 Logo" style="border-radius:10px;" />
+            <div>
+              <strong>2048</strong>
+              <div style="font-size:0.8rem; color:var(--text-muted);">Android 7.0+ · v1.2.0 · 5.18 MB</div>
+            </div>
+          </div>
+          <div class="showcase-actions">
+            <button type="button" class="btn btn-sm" style="background:#CBD5E1; color:#475569; border:1px solid #94A3B8;" onclick="showGooglePlayBetaNotice(event, 'and-2048')" data-i18n="btn.gp_dl">Google Play 下载</button>
+            <button type="button" class="btn btn-sm btn-android" onclick="startApkDownload(event, 'and-2048')" data-i18n="btn.apk_backup">下载 APK</button>
           </div>
         </div>
 

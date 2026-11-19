@@ -30,42 +30,45 @@
     </div>
   </header>
 
-  <section class="page-banner">
+  <section class="page-banner android-banner">
     <div class="container">
-      <span class="portal-pill" data-i18n="priv.pill">● Legal &amp; Privacy</span>
-      <h1>2048 隐私权政策</h1>
-      <p>应用包名：com.lubitsoft.game2048 · 开发者：LubitSoft Inc. · 更新日期：2026-11-19</p>
+      <h1 data-i18n="priv.2048_title">2048 隐私权政策 (Privacy Policy)</h1>
+      <p data-i18n="p2048.meta">应用包名：com.lubitsoft.game2048 · 开发者：LubitSoft Inc. · 更新日期：2026-11-19</p>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <div class="legal-card">
-        <h2>1. 引言与适用范围</h2>
-        <p>LubitSoft 高度重视用户的隐私与数据安全。本隐私权政策适用于您通过 LubitSoft 官方网站、LubitSoft 官方应用中心 App 或其他官方渠道下载并使用的 2048（包名：com.lubitsoft.game2048）Android 游戏应用程序。</p>
+      <article class="legal-doc">
+        <h2 data-i18n="p2048.h1">1. 引言与适用范围</h2>
+        <p data-i18n="p2048.p1">
+          LubitSoft 高度重视用户的隐私与数据安全。本隐私权政策适用于您通过 LubitSoft 官方网站、LubitSoft 官方应用中心 App 或其他官方渠道下载并使用的 2048（包名：com.lubitsoft.game2048）Android 游戏应用程序。
+        </p>
 
-        <h2>2. 零敏感权限与纯本地运行</h2>
-        <p>2048 严格遵循“零敏感权限、100% 本地运行、零隐私上传”原则：</p>
+        <h2 data-i18n="p2048.h2">2. 零敏感权限与纯本地运行架构</h2>
+        <p data-i18n="p2048.p2">2048 严格遵循“零敏感权限、100% 本地运行、零隐私上传”原则：</p>
         <ul>
-          <li>零设备敏感权限：本游戏不申请摄像头、麦克风、位置信息、通讯录、电话状态或外部存储读取等任何敏感权限。</li>
-          <li>纯本地游戏存档：您的当前棋盘进度、历史最高分、对局历史记录、游戏时长、音效与多语言设置均仅保存在设备本地沙盒（SharedPreferences）中，绝不上传至任何外部服务器。</li>
-          <li>本地实时音效：游戏音效在设备本地内存中实时合成播放，不读取任何个人媒体文件。</li>
+          <li data-i18n="p2048.li1">零设备敏感权限：本游戏不申请摄像头、麦克风、位置信息、通讯录、电话状态或外部存储读取等任何敏感权限。</li>
+          <li data-i18n="p2048.li2">纯本地游戏存档：您的当前棋盘进度、历史最高分、对局历史记录、游戏时长、音效与多语言设置均 100% 存储在您设备本地的应用沙盒（SharedPreferences）中，绝不上传至任何外部服务器。</li>
+          <li data-i18n="p2048.li3">本地实时音效：游戏内的轻敲音效均在设备本地内存中实时合成播放，不读取或访问您设备上的任何个人媒体文件。</li>
         </ul>
 
-        <h2>3. 联系我们</h2>
-        <p>如您对本隐私权政策有任何疑问或建议，请通过官方支持邮箱 <strong>support@lubitsoft.com</strong> 与我们联系。</p>
-      </div>
+        <h2 data-i18n="p2048.h3">3. 零广告与零第三方数据共享承诺</h2>
+        <ul>
+          <li data-i18n="p2048.li4">2048 无需注册或登录账号，不收集姓名、邮箱、设备标识符（IMEI / OAID / AAID）或任何个人身份信息。</li>
+          <li data-i18n="p2048.li5">本游戏不包含任何第三方商业广告 SDK、统计追踪 SDK 或后台唤醒服务，绝不向任何第三方出售、出租或共享用户数据。</li>
+          <li data-i18n="p2048.li6">外部跳转说明：仅当您在游戏设置中主动点击“公司官网 (lubitsoft.com)”或“问题反馈 (support@lubitsoft.com)”时，系统才会调用您设备上的浏览器或邮件客户端。</li>
+        </ul>
+
+        <h2 data-i18n="p2048.h4">4. 联系我们</h2>
+        <p>
+          Email: <a href="mailto:privacy@lubitsoft.com" style="color:var(--brand-blue); font-weight:600;">privacy@lubitsoft.com</a> / <a href="mailto:support@lubitsoft.com" style="color:var(--brand-blue); font-weight:600;">support@lubitsoft.com</a> · <a href="/game2048" style="color:var(--brand-blue); font-weight:600;" data-i18n="priv.back_2048">返回 2048 下载页</a>
+        </p>
+      </article>
     </div>
   </section>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-bottom" style="border-top:none; padding-top:0;">
-        <span data-i18n="footer.copy">© 2026 LubitSoft Inc. All rights reserved.</span>
-        <a href="/game2048" style="color:#CBD5E1;">← 返回 2048 详情页</a>
-      </div>
-    </div>
-  </footer>
+  <footer class="site-footer"></footer>
 
   <script src="../js/i18n.js?v=2026111902"></script>
   <script src="../js/main.js?v=2026111902"></script>
