@@ -68,7 +68,7 @@ const LUBIT_CATALOG = [
     detailPage: "/game2048",
     privacyPage: "/privacy-2048",
     playUrl: "",
-    sha256: "fdc3f28b9773810cbbe8f3b50da6cc5e4d9ce4b166bb99cf5d05ac24f93276ef"
+    sha256: "2481ef4ad578cc9be3d4811697cfef8d98141a98f92c3f3bf3867b87ea969c62"
   },
   {
     id: "win-hardwarelens",
