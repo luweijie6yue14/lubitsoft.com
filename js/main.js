@@ -114,6 +114,41 @@ const LUBIT_CATALOG = [
     packageId: "LubitSoft.LubitSoftUninstaller",
     detailPage: "/lubitsoftuninstaller",
     sha256: "ed39f8b670e189dc51cd551931f7ae2b158cf9212bb4089c669f6589d55a66fa"
+  },
+  {
+    id: "win-lubitsoftled",
+    platform: "windows",
+    isPaid: false,
+    hasPaidFeatures: false,
+    name: "LubitSoft LED",
+    version: "v1.0.0",
+    size: "47.78 MB",
+    req: "Windows 10 / Windows 11",
+    iconImg: `${ASSET_PREFIX}assets/lubitsoftled-logo.png`,
+    apkUrl: `${ASSET_PREFIX}downloads/LubitSoftLED_v1.0.0.exe`,
+    apkFileName: "LubitSoftLED_v1.0.0.exe",
+    packageId: "LubitSoft.LubitSoftLED",
+    detailPage: "/lubitsoftled",
+    privacyPage: "/privacy-lubitsoftled",
+    sha256: "a66e0086d1121c67d17c371e0358ccf4c7aa70e0fdb54688f9e9ea6f4aa2dba6"
+  },
+  {
+    id: "and-lubitsoftled",
+    platform: "android",
+    isGame: false,
+    playBetaPending: false,
+    name: "LubitSoft LED",
+    version: "v1.0.0",
+    size: "6.19 MB",
+    req: "Android 7.0+ (API 24+)",
+    iconImg: `${ASSET_PREFIX}assets/lubitsoftled-logo.png`,
+    apkUrl: `${ASSET_PREFIX}downloads/LubitSoftLED_v1.0.0.apk`,
+    apkFileName: "LubitSoftLED_v1.0.0.apk",
+    packageId: "com.lubitsoft.led",
+    detailPage: "/lubitsoftled",
+    privacyPage: "/privacy-lubitsoftled",
+    playUrl: "",
+    sha256: "d3ebcb44686987e770a4a3c76b05dcefbda5217f5d936ff727f130a2e522d7b7"
   }
 ];
 

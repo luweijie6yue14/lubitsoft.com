@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LubitSoft LED Privacy Policy — LubitSoft</title>
+  <script>(function(){var m=localStorage.getItem("lubitsoft_theme")||"auto";var d=m==="auto"?window.matchMedia("(prefers-color-scheme: dark)").matches:m==="dark";document.documentElement.setAttribute("data-theme",d?"dark":"light");document.documentElement.style.backgroundColor=d?"#0B1120":"#FFFFFF";})();</script>
+  <link rel="icon" type="image/png" href="../assets/lubitsoftled-logo.png" />
+  <link rel="stylesheet" href="../css/style.css?v=2026112001" />
+</head>
+<body data-page="privacy">
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="/" class="brand-link">
+        <img src="../logo.svg" alt="LubitSoft Logo" />
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/" data-i18n="nav.home">官网首页</a></li>
+        <li><a href="/about" data-i18n="nav.about">关于公司</a></li>
+        <li><a href="/android" data-i18n="nav.android">Android 专栏</a></li>
+        <li><a href="/windows" data-i18n="nav.windows">Windows 专栏</a></li>
+        <li><a href="/ios" data-i18n="nav.ios">iOS 专栏</a></li>
+        <li><a href="/macos" data-i18n="nav.macos">macOS 专栏</a></li>
+        <li><a href="/distributors" data-i18n="nav.distributors">分销商</a></li>
+        <li><a href="/support" data-i18n="nav.support">支持</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-banner android-banner">
+    <div class="container">
+      <h1 id="privBannerTitle">LubitSoft LED 隐私权政策 (Privacy Policy)</h1>
+      <p id="privBannerMeta">应用：LubitSoft LED (com.lubitsoft.led / Windows) · 开发者：LubitSoft · 更新日期：2026-11-20</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div style="margin-bottom: 16px; display:flex; align-items:center; gap:10px;">
+        <label for="privLangSel" style="font-weight:600;">Language:</label>
+        <select id="privLangSel" style="padding:6px 10px; border-radius:6px; border:1px solid var(--border-color); background:var(--bg-card); color:var(--text-primary);"></select>
+      </div>
+      <article class="legal-doc" id="privDoc"></article>
+      <p style="margin-top: 20px;">
+        Email: <a href="mailto:support@lubitsoft.com" style="color:var(--brand-blue); font-weight:600;">support@lubitsoft.com</a> · <a href="/lubitsoftled" style="color:var(--brand-blue); font-weight:600;">LubitSoft LED</a>
+      </p>
+    </div>
+  </section>
+
+  <footer class="site-footer"></footer>
+
+  <script src="../js/i18n.js?v=2026112001"></script>
+  <script src="../js/main.js?v=2026112001"></script>
+  <script>
+    (function(){
+      var LANGS = [
+        ["zh-CN","简体中文"],["zh-TW","繁體中文"],["en","English"],["ja","日本語"],["ko","한국어"],
+        ["fr","Français"],["de","Deutsch"],["es","Español"],["it","Italiano"],["ms","Bahasa Melayu"],["th","ไทย"]
+      ];
+      var DOCS = {
+        "zh-CN": {
+          title: "LubitSoft LED 隐私权政策 (Privacy Policy)",
+          html: "<h2>1. 不收集个人数据</h2><p>LubitSoft LED 完全离线运行，不收集、上传、存储或出售任何个人身份信息、设备标识符、位置信息或使用分析数据，也不包含任何第三方广告或统计 SDK。</p><h2>2. 局域网同步（需双方确认）</h2><p>局域网设备发现（UDP 48910）与状态同步（TCP 48911）仅在您所在的本地 Wi-Fi / 局域网内进行，且必须在双方设备均点击确认配对后才会传输 LED 显示内容与外观配置，不经过任何云端服务器。</p><h2>3. 本地配置与壁纸</h2><p>界面语言设置仅保存在您本地设备中（Windows：%APPDATA%\\LubitSoftLED\\settings.json；Android：SharedPreferences）。Windows 动态壁纸在本地渲染，关闭壁纸时自动恢复原桌面壁纸。</p><h2>4. 外部链接</h2><p>仅当您在「设置 → 关于软件」中主动点击官网 (lubitsoft.com) 或支持邮箱 (support@lubitsoft.com) 时，才会调用系统浏览器或邮件客户端。</p>"
+        },
+        "zh-TW": {
+          title: "LubitSoft LED 隱私權政策 (Privacy Policy)",
+          html: "<h2>1. 不收集個人資料</h2><p>LubitSoft LED 完全離線運作，不收集、上傳、儲存或出售任何個人資料、裝置識別碼、位置或分析數據。</p><h2>2. 區域網路同步（需雙方確認）</h2><p>區域網路探索（UDP 48910）與同步（TCP 48911）僅於本地 Wi-Fi 內進行，且必須雙方裝置均點擊確認配對後才會傳輸顯示狀態，不經由任何雲端伺服器。</p><h2>3. 本機設定與外部連結</h2><p>語言設定僅儲存於您的本機裝置中；僅於您主動點擊官網或支援信箱時才會開啟瀏覽器或郵件軟體。</p>"
+        },
+        "en": {
+          title: "LubitSoft LED Privacy Policy",
+          html: "<h2>1. No Personal Data Collection</h2><p>LubitSoft LED runs locally and does not collect, upload, store, or sell any personal data, device identifiers, location data, or analytics. It contains zero ads and zero third-party tracking SDKs.</p><h2>2. Local Network Sync (Mutual Consent)</h2><p>LAN discovery (UDP 48910) and state sync (TCP 48911) occur strictly within your local Wi-Fi/LAN and only after both devices explicitly confirm pairing. No cloud servers are used.</p><h2>3. Local Preferences & Wallpaper</h2><p>Your language preference is stored strictly locally on your device. Windows live wallpaper renders locally and restores your original wallpaper when stopped.</p><h2>4. External Links</h2><p>Opening lubitsoft.com or emailing support@lubitsoft.com happens only when you explicitly click/tap those links in Settings → About.</p>"
+        },
+        "ja": { title: "LubitSoft LED プライバシーポリシー", html: "<h2>1. 個人情報の非収集</h2><p>LubitSoft LEDは個人データ、位置情報、解析データを一切収集・送信しません。</p><h2>2. LAN同期（双方確認制）</h2><p>UDP 48910およびTCP 48911による同期はローカルWi-Fi内のみで動作し、双方の承認後のみ通信します。</p><h2>3. ローカル保存</h2><p>言語設定はお使いの端末内にのみ保存されます。</p>" },
+        "ko": { title: "LubitSoft LED 개인정보 처리방침", html: "<h2>1. 개인정보 미수집</h2><p>LubitSoft LED는 개인정보, 위치, 분석 데이터를 수집하거나 외부 서버로 전송하지 않습니다.</p><h2>2. LAN 동기화(양측 확인)</h2><p>로컬 Wi-Fi 내에서만 동작하며 양측 기기가 페어링을 수락한 경우에만 동기화됩니다.</p><h2>3. 로컬 저장</h2><p>언어 설정은 기기 내부에만 저장됩니다.</p>" },
+        "fr": { title: "Politique de confidentialité — LubitSoft LED", html: "<h2>1. Aucune collecte de données</h2><p>LubitSoft LED ne collecte, ne stocke ni ne transmet aucune donnée personnelle ou analytique.</p><h2>2. Synchro LAN (Confirmation mutuelle)</h2><p>La découverte (UDP 48910) et la synchro (TCP 48911) restent strictement sur votre réseau local après confirmation des deux appareils.</p>" },
+        "de": { title: "Datenschutzerklärung — LubitSoft LED", html: "<h2>1. Keine Datenerfassung</h2><p>LubitSoft LED erfasst, speichert oder überträgt keine personenbezogenen Daten oder Analysen.</p><h2>2. LAN-Sync (Beidseitige Bestätigung)</h2><p>Die Synchronisation (UDP 48910 / TCP 48911) erfolgt ausschließlich im lokalen WLAN nach Zustimmung beider Geräte.</p>" },
+        "es": { title: "Política de privacidad — LubitSoft LED", html: "<h2>1. Sin recopilación de datos</h2><p>LubitSoft LED no recopila, almacena ni envía datos personales ni analíticas.</p><h2>2. Sincronización LAN (Confirmación mutua)</h2><p>Funciona únicamente en su red Wi-Fi local (UDP 48910 / TCP 48911) tras la confirmación de ambos dispositivos.</p>" },
+        "it": { title: "Informativa sulla privacy — LubitSoft LED", html: "<h2>1. Nessuna raccolta dati</h2><p>LubitSoft LED non raccoglie né trasmette dati personali o statistiche.</p><h2>2. Sincronizzazione LAN (Conferma reciproca)</h2><p>Avviene esclusivamente sulla rete Wi-Fi locale (UDP 48910 / TCP 48911) dopo conferma di entrambi i dispositivi.</p>" },
+        "ms": { title: "Dasar Privasi — LubitSoft LED", html: "<h2>1. Tiada Pengumpulan Data</h2><p>LubitSoft LED tidak mengumpul atau menghantar sebarang data peribadi atau analitik.</p><h2>2. Segerak LAN (Pengesahan Dua Hala)</h2><p>Berjalan sepenuhnya dalam Wi-Fi tempatan (UDP 48910 / TCP 48911) selepas kedua-dua peranti bersetuju.</p>" },
+        "th": { title: "นโยบายความเป็นส่วนตัว — LubitSoft LED", html: "<h2>1. ไม่เก็บข้อมูลส่วนบุคคล</h2><p>LubitSoft LED ไม่เก็บ อัปโหลด หรือส่งต่อข้อมูลส่วนบุคคลหรือข้อมูลวิเคราะห์ใดๆ</p><h2>2. ซิงค์ LAN (ยืนยันสองฝ่าย)</h2><p>ทำงานเฉพาะใน Wi-Fi ท้องถิ่น (UDP 48910 / TCP 48911) หลังจากอุปกรณ์ทั้งสองฝ่ายกดยืนยันแล้วเท่านั้น</p>" }
+      };
+      var sel = document.getElementById("privLangSel");
+      LANGS.forEach(function(item){
+        var o = document.createElement("option");
+        o.value = item[0]; o.textContent = item[1];
+        sel.appendChild(o);
+      });
+      function render(code){
+        var d = DOCS[code] || DOCS["en"];
+        document.getElementById("privBannerTitle").textContent = d.title;
+        document.getElementById("privDoc").innerHTML = d.html;
+      }
+      var lang = (localStorage.getItem("lubitsoft_lang") || navigator.language || "en").toLowerCase();
+      var init = "en";
+      if (lang.startsWith("zh")) init = (lang.includes("tw")||lang.includes("hk")) ? "zh-TW" : "zh-CN";
+      else {
+        var hit = LANGS.find(function(x){ return lang.startsWith(x[0]); });
+        if (hit) init = hit[0];
+      }
+      sel.value = init;
+      render(init);
+      sel.addEventListener("change", function(){ render(sel.value); });
+    })();
+  </script>
+</body>
+</html>
