@@ -59,7 +59,7 @@ const LUBIT_CATALOG = [
     playBetaPending: true,
     name: "2048",
     version: "v1.2.0",
-    size: "5.18 MB",
+    size: "5.19 MB",
     req: "Android 7.0+ (API 24+)",
     iconImg: `${ASSET_PREFIX}assets/game2048-logo.png`,
     apkUrl: `${ASSET_PREFIX}downloads/Game2048_v1.2.0-release.apk`,
@@ -68,7 +68,7 @@ const LUBIT_CATALOG = [
     detailPage: "/game2048",
     privacyPage: "/privacy-2048",
     playUrl: "",
-    sha256: "37a5cf8b8168ccd1ee673e2fe9830daf5ab4197b544905f23981ffb73ae916c7"
+    sha256: "b0b507c777bb214e32112dbe3331414ac521ef1843a7722e0cc658fd4f534096"
   },
   {
     id: "win-hardwarelens",
