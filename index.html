@@ -6,7 +6,7 @@
   <title>LubitSoft — Android & Windows Official Software</title>
   <script>(function(){var m=localStorage.getItem("lubitsoft_theme")||"auto";var d=m==="auto"?window.matchMedia("(prefers-color-scheme: dark)").matches:m==="dark";document.documentElement.setAttribute("data-theme",d?"dark":"light");document.documentElement.style.backgroundColor=d?"#0B1120":"#FFFFFF";})();</script>
   <link rel="icon" type="image/svg+xml" href="logo-mark.svg" />
-  <link rel="stylesheet" href="css/style.css?v=2026111902" />
+  <link rel="stylesheet" href="css/style.css?v=2026112001" />
 </head>
 <body data-page="home">
   <!-- Header -->
@@ -48,7 +48,7 @@
             <div>
               <div style="font-size: 0.72rem; font-weight: 700; opacity: 0.9; margin-bottom: 2px;" data-i18n="app.badge">✦ 官方客户端 · Official Android App</div>
               <div style="font-size: 1rem; font-weight: 800; color: #FFFFFF;" data-i18n="app.title">LubitSoft 官方应用中心 App (v1.0.0)</div>
-              <div style="font-size: 0.8rem; color: rgba(255,255,255,0.85);" data-i18n="app.desc">Android 8.0+ · 12.88 MB · 一站式下载与自动更新提醒</div>
+              <div style="font-size: 0.8rem; color: rgba(255,255,255,0.85);" data-i18n="app.desc">Android 8.0+ · 12.93 MB · 一站式下载与自动更新提醒</div>
             </div>
           </div>
           <a href="downloads/LubitSoftApp_v1.0.0.apk" download="LubitSoftApp_v1.0.0.apk" class="btn btn-sm btn-android" style="white-space: nowrap; font-weight: 700;" data-i18n="app.dl_btn">
@@ -128,7 +128,7 @@
             <img class="app-logo-img" src="assets/game2048-logo.png" alt="2048 Logo" style="border-radius:10px;" />
             <div>
               <strong>2048</strong>
-              <div style="font-size:0.8rem; color:var(--text-muted);">Android 7.0+ · v1.2.0 · 5.18 MB</div>
+              <div style="font-size:0.8rem; color:var(--text-muted);">Android 7.0+ · v1.2.0 · 5.20 MB</div>
             </div>
           </div>
           <div class="showcase-actions">
@@ -164,6 +164,19 @@
             <button type="button" class="btn btn-sm btn-android" onclick="openPaymentModal('ForceUninstaller')" data-i18n="btn.buy_license">微信 / 支付宝付款</button>
           </div>
         </div>
+
+        <div class="showcase-item" onclick="navigateCard(event, '/lubitsoftuninstaller')">
+          <div class="showcase-meta">
+            <img class="app-logo-img" src="assets/lubitsoftuninstaller-logo.png" alt="LubitSoft Uninstaller Logo" />
+            <div>
+              <strong>LubitSoft Uninstaller</strong>
+              <div style="font-size:0.8rem; color:var(--text-muted);">Windows 7–11 · v1.0.0 · 4.27 MB</div>
+            </div>
+          </div>
+          <div class="showcase-actions">
+            <button type="button" class="btn btn-sm btn-windows" onclick="startApkDownload(event, 'win-lubitsoftuninstaller')" data-i18n="btn.dl_installer">下载安装程序</button>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -182,7 +195,7 @@
           <div>
             <span class="portal-pill android" data-i18n="portal.and_pill">● Android 移动生态专栏</span>
             <h3 data-i18n="portal.and_title">安卓软件下载与服务</h3>
-            <p data-i18n="portal.and_desc">面向智能手机与平板电脑打造，目前已正式上架 PureDasher 与 AirCompass，全系采用 Material 极简设计与低功耗本地架构。</p>
+            <p data-i18n="portal.and_desc">面向智能手机与平板电脑打造，已正式上架 PureDasher、AirCompass、Dino HD 与 2048，全系采用 Material 极简设计与低功耗本地架构。</p>
             <ul class="portal-features">
               <li data-i18n="portal.and_f1">官方直签 Universal APK</li>
               <li data-i18n="portal.and_f2">零后台唤醒与低耗电</li>
@@ -199,7 +212,7 @@
           <div>
             <span class="portal-pill windows" data-i18n="portal.win_pill">■ Windows 桌面生态专栏</span>
             <h3 data-i18n="portal.win_title">Windows 软件研发中心</h3>
-            <p data-i18n="portal.win_desc">面向 Windows 10 / 11 桌面平台的效率与系统工具正在研发打磨中，即将陆续发布原生 x64 与 ARM64 版本。</p>
+            <p data-i18n="portal.win_desc">面向 Windows 桌面平台打造的高效实用工具套件，已正式发布 LubitSoft Uninstaller（全免费）、HardwareLens 与 ForceUninstaller。</p>
             <ul class="portal-features">
               <li data-i18n="portal.win_f1">原生 x64 & ARM64 架构</li>
               <li data-i18n="portal.win_f2">数字签名安全认证</li>
@@ -322,7 +335,7 @@
     </div>
   </footer>
 
-  <script src="js/i18n.js?v=2026111902"></script>
-  <script src="js/main.js?v=2026111902"></script>
+  <script src="js/i18n.js?v=2026112001"></script>
+  <script src="js/main.js?v=2026112001"></script>
 </body>
 </html>

@@ -98,6 +98,22 @@ const LUBIT_CATALOG = [
     apkFileName: "ForceUninstaller_Setup_v1.1.0.exe",
     packageId: "LubitSoft.ForceUninstaller",
     detailPage: "/forceuninstaller"
+  },
+  {
+    id: "win-lubitsoftuninstaller",
+    platform: "windows",
+    isPaid: false,
+    hasPaidFeatures: false,
+    name: "LubitSoft Uninstaller",
+    version: "v1.0.0",
+    size: "4.27 MB",
+    req: "Windows 7 / 8 / 10 / 11 (32/64-bit)",
+    iconImg: `${ASSET_PREFIX}assets/lubitsoftuninstaller-logo.png`,
+    apkUrl: `${ASSET_PREFIX}downloads/LubitSoftUninstaller_Setup_v1.0.0.exe`,
+    apkFileName: "LubitSoftUninstaller_Setup_v1.0.0.exe",
+    packageId: "LubitSoft.LubitSoftUninstaller",
+    detailPage: "/lubitsoftuninstaller",
+    sha256: "ed39f8b670e189dc51cd551931f7ae2b158cf9212bb4089c669f6589d55a66fa"
   }
 ];
 
