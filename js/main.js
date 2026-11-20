@@ -117,6 +117,15 @@ const LUBIT_CATALOG = [
   }
 ];
 
+const LUBIT_OFFICIAL_APP = {
+  id: "lubitsoft-app",
+  name: "LubitSoft App",
+  version: "v2.0.0",
+  size: "19.10 MB",
+  apkFileName: "LubitSoftApp_v2.0.0.apk",
+  sha256: "87414b988c0598a21f08311c82b016c39b2a64544f80652ba5b1f387396df2f0"
+};
+
 const FALLBACK_TEXT = {
   "btn.gp_dl": "Google Play 下载",
   "btn.apk_backup": "下载 APK",
