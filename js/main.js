@@ -58,17 +58,17 @@ const LUBIT_CATALOG = [
     isGame: true,
     playBetaPending: true,
     name: "2048",
-    version: "v1.2.0",
-    size: "5.20 MB",
+    version: "v2.0.0",
+    size: "5.21 MB",
     req: "Android 7.0+ (API 24+)",
     iconImg: `${ASSET_PREFIX}assets/game2048-logo.png`,
-    apkUrl: `${ASSET_PREFIX}downloads/Game2048_v1.2.0-release.apk`,
-    apkFileName: "Game2048_v1.2.0-release.apk",
+    apkUrl: `${ASSET_PREFIX}downloads/Game2048_v2.0.0-release.apk`,
+    apkFileName: "Game2048_v2.0.0-release.apk",
     packageId: "com.lubitsoft.game2048",
     detailPage: "/game2048",
     privacyPage: "/privacy-2048",
     playUrl: "",
-    sha256: "2beec8628a37c2de0e194c91202b0ee381f5ad30454b25b827354b630ab16257"
+    sha256: "065b35e3c87044d20b4831c41041dfd262ff64f721d2729724f2bddf229273cd"
   },
   {
     id: "win-hardwarelens",
