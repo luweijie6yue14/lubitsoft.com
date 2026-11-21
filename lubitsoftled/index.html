@@ -6,7 +6,7 @@
   <title>LubitSoft LED — LubitSoft</title>
   <script>(function(){var m=localStorage.getItem("lubitsoft_theme")||"auto";var d=m==="auto"?window.matchMedia("(prefers-color-scheme: dark)").matches:m==="dark";document.documentElement.setAttribute("data-theme",d?"dark":"light");document.documentElement.style.backgroundColor=d?"#0B1120":"#FFFFFF";})();</script>
   <link rel="icon" type="image/png" href="../assets/lubitsoftled-logo.png" />
-  <link rel="stylesheet" href="../css/style.css?v=2026112001" />
+  <link rel="stylesheet" href="../css/style.css?v=2026112101" />
 </head>
 <body data-page="channel">
   <header class="site-header">
@@ -91,8 +91,8 @@
 
   <footer class="site-footer"></footer>
 
-  <script src="../js/i18n.js?v=2026112001"></script>
-  <script src="../js/main.js?v=2026112001"></script>
+  <script src="../js/i18n.js?v=2026112101"></script>
+  <script src="../js/main.js?v=2026112101"></script>
   <script>
     (function(){
       var T = {
@@ -116,21 +116,39 @@
           m1:"Version: v1.0.0", m2:"Platforms: Windows 10/11 & Android 7.0+", m3:"Languages: 11 Languages", m4:"License: Free · Zero Ads",
           win:"⬇ Download for Windows (47.78 MB)", and:"⬇ Download Android APK (6.19 MB)", priv:"Privacy Policy",
           ov:"Software Overview & Features"
+        },
+        "ug": {
+          pill:"● LubitSoft رەسمىي سۇپا ھالقىغان دېتال · Windows & Android ماسلىشىش",
+          sub:"ئەمەلىيەتكە يېقىن LED نۇقتا ئېكران دېتالى. ئاقما خەت، تۇراقلىق خەت، رەقەملىك سائەت ۋە پىكسېل رەسىم تاختىسىنى قوللايدۇ، Windows 8K جانلىق تام قەغىزى ۋە LAN ماسلىشىش بار.",
+          m1:"نەشرى: v1.0.0", m2:"سۇپا: Windows 10/11 & Android 7.0+", m3:"تىل: 11 خىل تىل", m4:"ئىجازەت: ھەقسىز · ئېلانسىز",
+          win:"⬇ Windows نۇسخىسىنى چۈشۈرۈش (47.78 MB)", and:"⬇ Android APK چۈشۈرۈش (6.19 MB)", priv:"مەخپىيەتلىك سىياسىتى",
+          ov:"يۇمشاق دېتال تەپسىلاتى ۋە ئىقتىدارلىرى"
+        },
+        "bo": {
+          pill:"● LubitSoft གཞུང་ཕྱོགས་སྟེགས་བུ་བརྒལ་བའི་མཉེན་ཆས། · Windows & Android",
+          sub:"དངོས་མཚུངས་ LED ཚེག་ཕྲེང་འཆར་ཤེལ་མཉེན་ཆས། ཡི་གེ་འགྲིལ་བ་དང་གཏན་འཇགས་ཡི་གེ། གྲངས་འཛིན་ཆུ་ཚོད། པིག་སེལ་རི་མོ་དང་ Windows 8K སྒུལ་བའི་རྒྱབ་ལྗོངས་རྒྱབ་སྐྱོར་བྱེད།",
+          m1:"ཐོན་རིམ།: v1.0.0", m2:"སྟེགས་བུ།: Windows 10/11 & Android 7.0+", m3:"སྐད་ཡིག: སྐད་ཡིག་ 11", m4:"དབང་ཆ།: རིན་མེད། · བརྡ་ཁྱབ་མེད།",
+          win:"⬇ Windows ཕབ་ལེན། (47.78 MB)", and:"⬇ Android APK ཕབ་ལེན། (6.19 MB)", priv:"གསང་དོན་སྲིད་ཇུས།",
+          ov:"མཉེན་ཆས་ངོ་སྤྲོད་དང་ཁྱད་ཆོས།"
         }
       };
-      var lang = localStorage.getItem("lubitsoft_lang") || navigator.language || "en";
-      var key = lang.toLowerCase().startsWith("zh") ? ((lang.toLowerCase().includes("tw")||lang.toLowerCase().includes("hk")) ? "zh-TW" : "zh-CN") : (T[lang] ? lang : "en");
-      var d = T[key] || T["en"];
-      document.getElementById("ledPill").textContent = d.pill;
-      document.getElementById("ledSub").textContent = d.sub;
-      document.getElementById("ledMeta1").textContent = d.m1;
-      document.getElementById("ledMeta2").textContent = d.m2;
-      document.getElementById("ledMeta3").textContent = d.m3;
-      document.getElementById("ledMeta4").textContent = d.m4;
-      document.getElementById("ledDlWin").textContent = d.win;
-      document.getElementById("ledDlAnd").textContent = d.and;
-      document.getElementById("ledPrivBtn").textContent = d.priv;
-      document.getElementById("ledOverviewT").textContent = d.ov;
+      function applyLedLang(){
+        var lang = (typeof getCurrentLang === "function") ? getCurrentLang() : (localStorage.getItem("lubitsoft_lang") || navigator.language || "en");
+        var key = lang.toLowerCase().startsWith("zh") ? ((lang.toLowerCase().includes("tw")||lang.toLowerCase().includes("hk")) ? "zh-TW" : "zh-CN") : (T[lang] ? lang : "en");
+        var d = T[key] || T["en"];
+        document.getElementById("ledPill").textContent = d.pill;
+        document.getElementById("ledSub").textContent = d.sub;
+        document.getElementById("ledMeta1").textContent = d.m1;
+        document.getElementById("ledMeta2").textContent = d.m2;
+        document.getElementById("ledMeta3").textContent = d.m3;
+        document.getElementById("ledMeta4").textContent = d.m4;
+        document.getElementById("ledDlWin").textContent = d.win;
+        document.getElementById("ledDlAnd").textContent = d.and;
+        document.getElementById("ledPrivBtn").textContent = d.priv;
+        document.getElementById("ledOverviewT").textContent = d.ov;
+      }
+      applyLedLang();
+      document.addEventListener("click", function(e){ if (e.target && e.target.closest("#langDropdownMenu")) setTimeout(applyLedLang, 0); });
     })();
   </script>
 </body>
